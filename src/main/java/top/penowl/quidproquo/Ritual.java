@@ -9,6 +9,7 @@ import org.bukkit.entity.Player;
 public abstract class Ritual {
     public HashMap<Material, Integer> ingredients = new HashMap<Material, Integer>();
     public HashMap<EntityType, Integer> sacrifices = new HashMap<EntityType, Integer>();
+    public int health = 0;
     public abstract void execute(Player caster, Player target);
     public void addIngredient(Material material, int count) {
         ingredients.put(material, count);
