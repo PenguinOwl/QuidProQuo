@@ -14,6 +14,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.Effect;
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.Sound;
 import org.bukkit.block.Block;
 import org.bukkit.entity.EntityType;
@@ -58,15 +59,20 @@ public final class Events implements Listener {
             }
             Collections.sort(uuids);
 
-            // if the player already has a target, pick the next one, otherwise pick the first
-            if (QuidProQuo.instance.targets.containsKey(playerUuid)) {
-                UUID current_target = QuidProQuo.instance.targets.get(playerUuid);
-                if (Bukkit.getPlayer(QuidProQuo.instance.targets.get(playerUuid)) == null) {
+            if (uuids.size() == 0) {
+                player.sendMessage(ChatColor.YELLOW + "No targets online!");
+            } else {
+                // if the player already has a target, pick the next one, otherwise pick the first
+                if (QuidProQuo.instance.targets.containsKey(playerUuid)) {
+                    UUID current_target = QuidProQuo.instance.targets.get(playerUuid);
+                    if (Bukkit.getPlayer(QuidProQuo.instance.targets.get(playerUuid)) instanceof OfflinePlayer) {
+                        QuidProQuo.instance.targets.put(playerUuid, uuids.get(0));
+                    }
+                    QuidProQuo.instance.targets.put(playerUuid, uuids.get((uuids.indexOf(current_target) + 1) % uuids.size()));
+                } else {
                     QuidProQuo.instance.targets.put(playerUuid, uuids.get(0));
                 }
-                QuidProQuo.instance.targets.put(playerUuid, uuids.get((uuids.indexOf(current_target) + 1) % uuids.size()));
-            } else {
-                QuidProQuo.instance.targets.put(playerUuid, uuids.get(0));
+                player.sendMessage(ChatColor.YELLOW + "Switched target to " + Bukkit.getPlayer(QuidProQuo.instance.targets.get(playerUuid)));
             }
 
             // friendly message
@@ -182,13 +188,17 @@ public final class Events implements Listener {
                 }
                 Collections.sort(uuids);
 
-                if (!QuidProQuo.instance.targets.containsKey(playerUuid)) {
-                    QuidProQuo.instance.targets.put(playerUuid, uuids.get(0));
+                if (uuids.size() == 0) {
+                    otherPlayer = null;
+                } else {
+                    if (!QuidProQuo.instance.targets.containsKey(playerUuid)) {
+                        QuidProQuo.instance.targets.put(playerUuid, uuids.get(0));
+                    }
+                    if (Bukkit.getPlayer(QuidProQuo.instance.targets.get(playerUuid)) instanceof OfflinePlayer) {
+                        QuidProQuo.instance.targets.put(playerUuid, uuids.get(0));
+                    }
+                    otherPlayer = Bukkit.getPlayer(QuidProQuo.instance.targets.get(playerUuid));
                 }
-                if (Bukkit.getPlayer(QuidProQuo.instance.targets.get(playerUuid)) == null) {
-                    QuidProQuo.instance.targets.put(playerUuid, uuids.get(0));
-                }
-                otherPlayer = Bukkit.getPlayer(QuidProQuo.instance.targets.get(playerUuid));
 
                 // backfire check, if succeeds then the ritual gets reversed
                 if(new Random().nextDouble() >= ritual.backfire) {

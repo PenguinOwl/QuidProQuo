@@ -13,7 +13,7 @@ public class FeedingRitual extends Ritual {
     public void setup() {
         addSacrifice(EntityType.PIG, 1);
         addIngredient(Material.WOOD_SWORD, 1);
-        health = 4;
+        health = 1;
         name = "feeding";
     }
 
