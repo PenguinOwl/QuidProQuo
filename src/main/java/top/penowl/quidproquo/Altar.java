@@ -5,6 +5,8 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 
 public class Altar {
+
+    // this thing just makes sure the multiblock is built right, doesn't check for air right now
     public static Boolean CheckAltar(Location location) {
         Boolean gold_block = location.getBlock().getType() == Material.GOLD_BLOCK;
         int iron_blocks = 0;

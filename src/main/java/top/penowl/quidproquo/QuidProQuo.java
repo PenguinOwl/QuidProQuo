@@ -11,31 +11,47 @@ import top.penowl.quidproquo.rituals.HealRitual;
 import top.penowl.quidproquo.rituals.WoolingRitual;
 
 public class QuidProQuo extends JavaPlugin {
-    
+
+    // DONT COMMENT CODE AT 3 AM
+
+    // haha singleton go brrr
     public static QuidProQuo instance;
+
+    // global list of registered rituals
     public ArrayList<Ritual> rituals = new ArrayList<Ritual>();
+    
+    // dictionary of who has who selected as a ritual target
     public HashMap<UUID, UUID> targets = new HashMap<UUID, UUID>();
 
+    // this gets run when the plugin loads
     @Override
     public void onEnable() {
+
+        // here we register events and the singleton
         instance = this;
-        getLogger().info("Hello, SpigotMC!");
+        getLogger().info("Loading rituals...");
         getServer().getPluginManager().registerEvents(new Events(), this);
 
+        // register all rituals
         rituals.add(new HealRitual());
         rituals.add(new WoolingRitual());
         rituals.add(new FeedingRitual());
 
+        // run ritual setup scripts
         for (Ritual ritual : rituals) {
             getLogger().info("Loading " + ritual.getClass().toString() + "...");
             ritual.setup();
             getLogger().info("Loaded a " + ritual.name + " ritual.");
         }
+
     }
     @Override
     public void onDisable() {
-        getLogger().info("See you again, SpigotMC!");
+
+        // basically just handler cleanup
+        getLogger().info("Unloading handler...");
         HandlerList.unregisterAll(this);
+
     }
 
 }
