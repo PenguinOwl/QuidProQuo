@@ -52,9 +52,9 @@ public final class Events implements Listener {
             List<Player> players = new ArrayList<Player>(Bukkit.getOnlinePlayers());
             List<UUID> uuids = new ArrayList<UUID>();
             for (Player target : players) {
-                if (target.getUniqueId() != playerUuid) {
+                //if (target.getUniqueId() != playerUuid) {
                     uuids.add(target.getUniqueId());
-                }
+                //}
             }
             Collections.sort(uuids);
 
@@ -70,7 +70,7 @@ public final class Events implements Listener {
             }
 
             // friendly message
-            player.sendMessage(ChatColor.YELLOW + "Switched target to " + Bukkit.getPlayer(QuidProQuo.instance.targets.get(playerUuid)));
+            player.sendMessage(ChatColor.YELLOW + "Switched target to " + Bukkit.getPlayer(QuidProQuo.instance.targets.get(playerUuid)).getName());
 
         } else {
 

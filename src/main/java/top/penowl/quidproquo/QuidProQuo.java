@@ -8,6 +8,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import top.penowl.quidproquo.rituals.FeedingRitual;
 import top.penowl.quidproquo.rituals.HealRitual;
+import top.penowl.quidproquo.rituals.SnowmanRitual;
 import top.penowl.quidproquo.rituals.WoolingRitual;
 
 public class QuidProQuo extends JavaPlugin {
@@ -36,6 +37,7 @@ public class QuidProQuo extends JavaPlugin {
         rituals.add(new HealRitual());
         rituals.add(new WoolingRitual());
         rituals.add(new FeedingRitual());
+        rituals.add(new SnowmanRitual());
 
         // run ritual setup scripts
         for (Ritual ritual : rituals) {
