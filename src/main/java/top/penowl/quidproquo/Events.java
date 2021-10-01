@@ -72,7 +72,6 @@ public final class Events implements Listener {
                 } else {
                     QuidProQuo.instance.targets.put(playerUuid, uuids.get(0));
                 }
-                player.sendMessage(ChatColor.YELLOW + "Switched target to " + Bukkit.getPlayer(QuidProQuo.instance.targets.get(playerUuid)));
             }
 
             // friendly message
@@ -120,9 +119,11 @@ public final class Events implements Listener {
                     for (Item item : matches) {
                         matchCount += item.getItemStack().getAmount();
                     }
-                    if (matchCount >= count) {
+                    if (matchCount > count) {
                         possibleItems.add(matches);
                         byproducts.add(new ItemStack(material, matchCount - count));
+                    } else if (matchCount == count) {
+                        possibleItems.add(matches);
                     } else {
                         failed = true;
                         break;
