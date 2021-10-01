@@ -1,8 +1,5 @@
 package top.penowl.quidproquo;
 
-import com.avaje.ebean.LogLevel;
-import com.sun.tools.sjavac.Log.Level;
-
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
