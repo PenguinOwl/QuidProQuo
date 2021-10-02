@@ -15,8 +15,9 @@ public class FillerRitual extends Ritual {
 
     @Override
     public void setup() {
-        addIngredient(Material.LOG, 64);
+        addIngredient(Material.LOG, 1);
         addSacrifice(EntityType.PIG, 1);
+        addIngredient(Material.WHEAT, 128);
         name = "trolling";
         health = 2;
         backfire = 0.2;
