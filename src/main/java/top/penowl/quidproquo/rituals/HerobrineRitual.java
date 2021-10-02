@@ -34,7 +34,7 @@ public class HerobrineRitual extends Ritual {
     public void execute(Player caster, Player target, Location location) {
         Entity herobrine;
         Location targetLocation = target.getLocation();
-        Block block = targetLocation.clone().add(0, 1, 0).getBlock();
+        Block block = targetLocation.getBlock();
         for (int x = -5; x <= 5; x++) {
             for (int z = -5; z <= 5; z++) {
                 Material footblock = block.getRelative(x, 0, z).getType();
