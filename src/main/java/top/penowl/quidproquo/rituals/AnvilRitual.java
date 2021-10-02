@@ -7,6 +7,7 @@ import org.bukkit.entity.Player;
 
 import top.penowl.quidproquo.Ritual;
 
+@SuppressWarnings("deprecation")
 public class AnvilRitual extends Ritual {
 
     @Override
