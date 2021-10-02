@@ -16,7 +16,7 @@ public class Commands implements CommandExecutor {
 
     public Commands(List<Ritual> rituals) {
         for (Ritual ritual : rituals) {
-            recipes.put(ritual.name.toUpperCase(), ritual);
+            recipes.put(ritual.name.toLowerCase(), ritual);
         }
     }
 
@@ -28,7 +28,7 @@ public class Commands implements CommandExecutor {
         } else if (args[0].toLowerCase().equals("list")) {
             List<String> ritualNames = new ArrayList<String>(recipes.keySet());
             int max = ritualNames.size() - 1;
-            int maxPages = max / 10;
+            int maxPages = max / 9;
             int page = 0;
             try {
                 page = Math.min(Math.max(Integer.parseInt(args[1]) - 1, 0), maxPages);
@@ -37,7 +37,7 @@ public class Commands implements CommandExecutor {
             StringBuilder builder = new StringBuilder();
             builder.append(ChatColor.DARK_PURPLE + "======== Rituals ========    " + ChatColor.YELLOW + "Page " + String.valueOf(page + 1) + " / " + String.valueOf(maxPages + 1));
             builder.append("\n" + ChatColor.GREEN);
-            for (int i = page * 10; i < Math.min(page * 10 + 10, max + 1); i++) {
+            for (int i = page * 9; i < Math.min(page * 9 + 9, max + 1); i++) {
                 builder.append(ritualNames.get(i));
                 builder.append("\n" + ChatColor.GREEN);
             }

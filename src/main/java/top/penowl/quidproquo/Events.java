@@ -162,7 +162,7 @@ public final class Events implements Listener {
                 }
 
                 // administer health penalty
-                player.setHealth(player.getHealth() - ritual.health);
+                player.setHealth(Math.max(0, player.getHealth() - ritual.health));
 
                 // shiny message
                 player.sendMessage(ChatColor.GREEN + "You enacted a " + ritual.name + " ritual.");
