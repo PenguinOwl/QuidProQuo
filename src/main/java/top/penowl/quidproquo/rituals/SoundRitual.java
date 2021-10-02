@@ -19,7 +19,7 @@ public class SoundRitual extends Ritual {
 
     @Override
     public void execute(Player caster, Player target, Location location) {
-        Sound randomSound = Sound.ENDERDRAGON_DEATH;
+        Sound randomSound;
         int randomInt = new Random().nextInt(13);
         switch (randomInt) {
             case 0:
@@ -58,7 +58,7 @@ public class SoundRitual extends Ritual {
             case 11:
                 randomSound = Sound.STEP_GRASS;
                 break;
-            case 12:
+            default:
                 randomSound = Sound.ZOMBIE_HURT;
                 break;
         }

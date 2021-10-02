@@ -1,13 +1,11 @@
 package top.penowl.quidproquo.rituals;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import java.util.Random;
 
 import top.penowl.quidproquo.Ritual;
 
@@ -28,17 +26,22 @@ public class FillerRitual extends Ritual {
         int items = target.getInventory().getSize();
         for (int i = 0; i < items; i++) {
             Material typeMaterial;
-            double random = Math.random();
-            if (random < 0.20) {
-                typeMaterial = Material.WOOD_AXE;
-            } else if (random < 0.40) {
-                typeMaterial = Material.WOOD_SPADE;
-            } else if (random < 0.60) {
-                typeMaterial = Material.WOOD_SWORD;
-            } else if (random < 0.80) {
-                typeMaterial = Material.WOOD_PICKAXE;
-            } else {
-                typeMaterial = Material.WOOD_HOE;
+            int random = new Random().nextInt(5);
+            switch(random) {
+                case 0:
+                    typeMaterial = Material.WOOD_AXE;
+                    break;
+                case 1:
+                    typeMaterial = Material.WOOD_SPADE;
+                    break;
+                case 2:
+                    typeMaterial = Material.WOOD_SWORD;
+                    break;
+                case 3:
+                    typeMaterial = Material.WOOD_PICKAXE;
+                default:
+                    typeMaterial=Material.WOOD_HOE;
+                    break;
             }
             ItemStack tool = new ItemStack(typeMaterial, 1);
             tool.setDurability((short) (Material.WOOD_PICKAXE.getMaxDurability() - 1));
