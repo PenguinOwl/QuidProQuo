@@ -20,9 +20,7 @@ public class HitRitual extends Ritual {
     @Override
     public void execute(Player caster, Player target, Location location) {
         target.playSound(target.getLocation(), Sound.HURT_FLESH, 1, 1);
-        for(int i = 0; i < 3; i ++) {
-            target.playSound(target.getLocation(), Sound.SUCCESSFUL_HIT, 1, 1);
-        }
+        //target.damage(1.0);
     }
 
 }
