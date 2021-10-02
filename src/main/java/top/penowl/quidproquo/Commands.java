@@ -72,7 +72,7 @@ public class Commands implements CommandExecutor {
                 builder.append(": " + ChatColor.AQUA + entry.getValue().toString());
                 builder.append("\n");
             }
-            builder.append(" \n" + ChatColor.AQUA + "" + ChatColor.BOLD + "Blood: " + ChatColor.RESET + "" + ChatColor.AQUA + String.valueOf(ritual.health / 2.0) + ChatColor.RED + "♥\n");
+            builder.append(" \n" + ChatColor.GOLD + "" + ChatColor.BOLD + "Blood: " + ChatColor.RESET + "" + ChatColor.AQUA + String.valueOf(ritual.health / 2.0) + ChatColor.RED + "♥\n");
             builder.append(ChatColor.GOLD + "" + ChatColor.BOLD + "Backfire: " + ChatColor.RESET + "" + ChatColor.AQUA + String.valueOf(Math.round(ritual.backfire * 100)) + ChatColor.GREEN + "%\n");
             sender.sendMessage(builder.toString());
             return true;
