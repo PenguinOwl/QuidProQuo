@@ -1,3 +1,12 @@
 main: top.penowl.quidproquo.QuidProQuo
 name: QuidProQuo
 version: 0.1
+commands:
+  ritual:
+    description: Check ritual information.
+    aliases: [quidproquo, rt]
+    permission: quidproquo.command
+    permission-message: You do not have /&lt;permission&gt;
+    usage: |
+      §3/ritual list - List all available rituals.
+      §3/ritual <ritual> - See the information on a ritual
