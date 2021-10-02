@@ -37,6 +37,8 @@ public class QuidProQuo extends JavaPlugin {
         rituals.add(new SnowmanRitual());
         rituals.add(new GetLuckyRitual());
         rituals.add(new AnvilRitual());
+        rituals.add(new FillerRitual());
+        rituals.add(new LavaRitual());
 
         // run ritual setup scripts
         for (Ritual ritual : rituals) {

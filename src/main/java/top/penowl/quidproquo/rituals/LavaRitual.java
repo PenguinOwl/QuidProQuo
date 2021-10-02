@@ -6,11 +6,12 @@ import org.bukkit.entity.Player;
 
 import top.penowl.quidproquo.Ritual;
 
-public class Lava extends Ritual {
+public class LavaRitual extends Ritual {
     @Override
     public void setup() {
-       addIngredient(Material.LAVA_BUCKET, 5);
+       addIngredient(Material.LAVA_BUCKET, 1);
        addIngredient(Material.DIAMOND, 1);
+       addIngredient(Material.WHEAT, 64);
        backfire = 0.50;
        name = "combustion";
     }
