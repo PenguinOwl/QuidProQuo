@@ -195,8 +195,9 @@ public final class Events implements Listener {
                     if (!QuidProQuo.instance.targets.containsKey(playerUuid)) {
                         QuidProQuo.instance.targets.put(playerUuid, uuids.get(0));
                     }
-                    if (Bukkit.getPlayer(QuidProQuo.instance.targets.get(playerUuid)) instanceof OfflinePlayer) {
+                    if (!(Bukkit.getPlayer(QuidProQuo.instance.targets.get(playerUuid))).isOnline()) {
                         QuidProQuo.instance.targets.put(playerUuid, uuids.get(0));
+                        Bukkit.getLogger().info("tet");
                     }
                     otherPlayer = Bukkit.getPlayer(QuidProQuo.instance.targets.get(playerUuid));
                 }
