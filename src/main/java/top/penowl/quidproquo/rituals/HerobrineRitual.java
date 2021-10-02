@@ -21,11 +21,15 @@ public class HerobrineRitual extends Ritual {
 
     @Override
     public void setup() {
-        addIngredient(Material.WHEAT, 64);
-        addIngredient(Material.DIAMOND, 2);
+        addIngredient(Material.WHEAT, 64*9);
+        addIngredient(Material.DIAMOND, 9);
+        addIngredient(Material.ROTTEN_FLESH, 64);
+        addIngredient(Material.REDSTONE_BLOCK, 9);
+        addIngredient(Material.SUGAR, 32);
+        addSacrifice(EntityType.ZOMBIE, 3);
         health = 10;
         name = "herobrine";
-        backfire = 0.5;
+        backfire = 0.1;
     }
     @Override
     public void execute(Player caster, Player target, Location location) {
@@ -59,11 +63,11 @@ public class HerobrineRitual extends Ritual {
         heroBine.addPotionEffect(fireResistance);
         heroBine.addPotionEffect(speed);
         EntityEquipment equipment = heroBine.getEquipment();
-        ItemStack headStack = new ItemStack(Material.SKULL);
-        ItemMeta headMeta = headStack.getItemMeta();
-        SkullMeta skullMeta = (SkullMeta)headMeta;
-        skullMeta.setOwner("Herobrine");
-        equipment.setHelmet(headStack);
+        ItemStack skull = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);
+        SkullMeta meta = (SkullMeta) skull.getItemMeta();
+        meta.setOwner("MHF_Herobrine");
+        skull.setItemMeta(meta);
+        equipment.setHelmet(skull);
         equipment.setChestplate(new ItemStack(Material.DIAMOND_CHESTPLATE));
         equipment.setLeggings(new ItemStack(Material.DIAMOND_LEGGINGS));
         equipment.setBoots(new ItemStack(Material.DIAMOND_BOOTS));

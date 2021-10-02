@@ -31,7 +31,6 @@ public class QuidProQuo extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new Events(), this);
 
         // register all rituals
-        rituals.add(new HealRitual());
         rituals.add(new WoolingRitual());
         rituals.add(new FeedingRitual());
         rituals.add(new SnowmanRitual());
@@ -45,6 +44,7 @@ public class QuidProQuo extends JavaPlugin {
         rituals.add(new ChugJugRitual());
         rituals.add(new CreeperHissRitual());
         rituals.add(new RotateRitual());
+        rituals.add(new HealRitual());
 
         // run ritual setup scripts
         for (Ritual ritual : rituals) {
