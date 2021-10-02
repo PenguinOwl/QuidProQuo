@@ -10,13 +10,14 @@ public class HealRitual extends Ritual {
 
     @Override
     public void setup() {
-        addIngredient(Material.REDSTONE, 9);
+        addIngredient(Material.REDSTONE, 1);
+        addIngredient(Material.WHEAT, 16);
         name = "healing";
     }
 
     @Override
     public void execute(Player caster, Player target, Location location) {
-        caster.setHealth(Math.min(caster.getMaxHealth(), caster.getHealth()+2.0));
+        caster.setHealth(Math.min(caster.getMaxHealth(), caster.getHealth()+8.0));
     }
     
 }

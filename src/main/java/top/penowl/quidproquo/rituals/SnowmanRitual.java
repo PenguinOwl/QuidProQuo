@@ -12,8 +12,9 @@ public class SnowmanRitual extends Ritual {
     @Override
     public void setup() {
         addIngredient(Material.STICK, 64);
-        addIngredient(Material.DIAMOND, 2);
-        addSacrifice(EntityType.SHEEP, 3);
+        addIngredient(Material.DIAMOND, 1);
+        addSacrifice(EntityType.SHEEP, 1);
+        addIngredient(Material.WHEAT, 32);
         health = 10;
         name = "snowing";
     }

@@ -12,13 +12,13 @@ public class LavaRitual extends Ritual {
        addIngredient(Material.LAVA_BUCKET, 1);
        addIngredient(Material.DIAMOND, 1);
        addIngredient(Material.WHEAT, 64);
-       backfire = 0.50;
+       backfire = 0.10;
        name = "combustion";
     }
 
     @Override
     public void execute(Player caster, Player target, Location location) {
-        target.setFireTicks(60);
+        target.setFireTicks(250);
     }
 
 }
