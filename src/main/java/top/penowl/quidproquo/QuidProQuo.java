@@ -30,6 +30,9 @@ public class QuidProQuo extends JavaPlugin {
         getLogger().info("Loading rituals...");
         getServer().getPluginManager().registerEvents(new Events(), this);
 
+        // register command handler
+        getCommand("ritual").setExecutor(new Commands(rituals));
+
         // register all rituals
         rituals.add(new HealRitual());
         rituals.add(new WoolingRitual());
