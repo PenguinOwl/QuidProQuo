@@ -33,6 +33,7 @@ public class QuidProQuo extends JavaPlugin {
         // register all rituals
         rituals.add(new AnvilRitual());
         rituals.add(new BatSpewRitual());
+        rituals.add(new BlockShiftRitual());
         rituals.add(new ChickenSpewRitual());
         rituals.add(new ChugJugRitual());
         rituals.add(new CreeperHissRitual());
