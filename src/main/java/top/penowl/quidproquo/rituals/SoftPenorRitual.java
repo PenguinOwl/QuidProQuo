@@ -24,11 +24,7 @@ public class SoftPenorRitual extends Ritual {
 
     @Override
     public void execute(Player caster, Player target, Location location) {
-        Bukkit.getLogger().info("Heetwerutrth3w4uti34ht");
-        Bukkit.getLogger().info(target.toString());
-        // Block shaft = target.getLocation().getBlock();
-        Location log = target.getLocation();
-        Block shaft = log.getBlock();
+        Block shaft = target.getLocation().getBlock();
         Block ball1 = shaft.getRelative(2, 0, -1);
         Block ball2 = shaft.getRelative(-2, 0, -1);
         for(int d = 0; d < 8; d ++) {
@@ -38,23 +34,23 @@ public class SoftPenorRitual extends Ritual {
             int z = 0;
             if(d % 3 == 0) z = 1;
             if(d % 3 == 1) z = -1;
-            for(int y = 0; y < 15; y++) {
+            for(int y = 0; y < 9; y++) {
                 Block changingBlock = shaft.getRelative(x,y,z);
                 if(changingBlock.getType() == Material.AIR)
-                    changingBlock.setType(Material.DIRT);
+                    changingBlock.setType(Material.SAND);
             }
         }
-        /* for(int x = 0; x < 3; x ++) {
+        for(int x = 0; x < 3; x ++) {
             for(int y = 0; y < 3; y ++) {
                 for(int z = 0; z < 3; z ++) {
                     Block changingBlock1 = ball1.getRelative(x,y,z);
-                    Block changingBlock2 = ball2.getRelative(x,y,z);
+                    Block changingBlock2 = ball2.getRelative(x*-1,y,z);
                     if(changingBlock1.getType() == Material.AIR)
-                        changingBlock1.setType(Material.DIRT);
+                        changingBlock1.setType(Material.SAND);
                     if(changingBlock2.getType() == Material.AIR)
-                        changingBlock1.setType(Material.DIRT);
+                        changingBlock2.setType(Material.SAND);
                 }
             }
-        } */
+        }
     }
 }
