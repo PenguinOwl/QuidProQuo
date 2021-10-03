@@ -2,7 +2,9 @@ package top.penowl.quidproquo.rituals;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
+import java.util.Random;
 
 import top.penowl.quidproquo.Ritual;
 
@@ -37,6 +39,18 @@ public class BlockShiftRitual extends Ritual {
 
     @Override
     public void execute(Player caster, Player target, Location location) {
+        Random random = new Random();
+        Material fromMat = pMat[random.nextInt(64)];
+        Material toMat = pMat[random.nextInt(64)];
+        for(int x = -5; x <= 5; x ++) {
+            for(int y = -5; y <= 5; y ++) {
+                for(int z = -5; z <= 5; z ++) {
+                    Block testBlock = target.getLocation().getBlock().getRelative(x, y, z);
+                    if(testBlock.getType() == fromMat)
+                        testBlock.setType(toMat);
+                }
+            }
+        }
     }
     
 }
