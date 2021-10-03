@@ -8,5 +8,5 @@ commands:
     permission: quidproquo.command
     permission-message: You do not have /&lt;permission&gt;
     usage: |
-      §3/ritual list - List all available rituals.
+      §3/ritual list [page] - List all available rituals.
       §3/ritual <ritual> - See the information on a ritual
