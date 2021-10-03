@@ -9,8 +9,22 @@ import top.penowl.quidproquo.Ritual;
 public class BlockShiftRitual extends Ritual {
     //possible mats
     private static final Material[] pMat = {
-        Material.STONE, Material.GRASS, Material.DIRT, Material.COBBLESTONE, Material.PLANKS,
-        Material.WATER, Material.LAVA, Material.SAND
+        Material.STONE, Material.GRASS, Material.DIRT, Material.COBBLESTONE, Material.WOOD,
+        Material.WATER, Material.LAVA, Material.SAND, Material.GRAVEL, Material.GOLD_ORE,
+        Material.IRON_ORE, Material.COAL_ORE, Material.LOG, Material.LEAVES, Material.SPONGE,
+        Material.GLASS, Material.LAPIS_ORE, Material.LAPIS_BLOCK, Material.SANDSTONE,
+        Material.WEB, Material.WOOL, Material.GOLD_BLOCK, Material.IRON_BLOCK, Material.BRICK,
+        Material.TNT, Material.BOOKSHELF, Material.MOSSY_COBBLESTONE, Material.OBSIDIAN, 
+        Material.DIAMOND_ORE, Material.DIAMOND_BLOCK, Material.REDSTONE_ORE, Material.ICE,
+        Material.SNOW_BLOCK, Material.CLAY, Material.PUMPKIN, Material.NETHERRACK,
+        Material.SOUL_SAND, Material.GLOWSTONE, Material.JACK_O_LANTERN, Material.STAINED_GLASS,
+        Material.MONSTER_EGG, Material.SMOOTH_BRICK, Material.HUGE_MUSHROOM_1,
+        Material.HUGE_MUSHROOM_2, Material.MELON_BLOCK, Material.MYCEL, Material.NETHER_BRICK,
+        Material.ENDER_STONE, Material.EMERALD_ORE, Material.EMERALD_BLOCK, Material.REDSTONE_BLOCK,
+        Material.QUARTZ_ORE, Material.QUARTZ_BLOCK, Material.STAINED_CLAY, Material.LEAVES,
+        Material.LOG, Material.SLIME_BLOCK, Material.PRISMARINE, Material.SEA_LANTERN,
+        Material.HAY_BLOCK, Material.CLAY_BRICK, Material.COAL_BLOCK, Material.PACKED_ICE,
+        Material.RED_SANDSTONE
     };
     @Override
     public void setup() {
