@@ -23,7 +23,7 @@ public class AnvilRitual extends Ritual {
 
     @Override
     public void execute(Player caster, Player target, Location location) {
-        FallingBlock block = target.getLocation().getWorld().spawnFallingBlock(target.getLocation().clone().add(0, 20, 0), Material.ANVIL, (byte) 0);
+        FallingBlock block = target.getWorld().spawnFallingBlock(target.getLocation().clone().add(0, 20, 0), Material.ANVIL, (byte) 0);
         block.setHurtEntities(true);
     }
     

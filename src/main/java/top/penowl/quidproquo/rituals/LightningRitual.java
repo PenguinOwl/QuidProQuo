@@ -2,7 +2,6 @@ package top.penowl.quidproquo.rituals;
 
 import java.util.List;
 
-import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
@@ -22,10 +21,10 @@ public class LightningRitual extends Ritual {
     @Override
     public void execute(Player caster, Player target, Location location) {
         // Does this actually get the overworld?
-        World overworld = Bukkit.getWorld("world");
-        List<Player> players = overworld.getPlayers();
+        World world = location.getWorld();
+        List<Player> players = world.getPlayers();
         for(Player player : players) {
-            overworld.strikeLightningEffect(player.getLocation().clone().add(0, 1, 0));
+            world.strikeLightningEffect(player.getLocation().clone().add(0, 1, 0));
         }
     }
     

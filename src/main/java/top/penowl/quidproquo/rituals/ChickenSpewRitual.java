@@ -21,7 +21,7 @@ public class ChickenSpewRitual extends Ritual {
     @Override
     public void execute(Player caster, Player target, Location location) {
         for (int i = 0; i < 20; i++) {
-            target.getLocation().getWorld().spawnEntity(target.getLocation(), EntityType.CHICKEN);
+            target.getWorld().spawnEntity(target.getLocation(), EntityType.CHICKEN);
         }
     }
     
