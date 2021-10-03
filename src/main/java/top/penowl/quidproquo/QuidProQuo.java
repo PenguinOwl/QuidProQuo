@@ -43,7 +43,6 @@ public class QuidProQuo extends JavaPlugin {
         rituals.add(new FeedingRitual());
         rituals.add(new FillerRitual());
         rituals.add(new GetLuckyRitual());
-        rituals.add(new HardPenorRitual());
         rituals.add(new HealRitual());
         rituals.add(new HerobrineRitual());
         rituals.add(new HitRitual());

@@ -1,6 +1,7 @@
 package top.penowl.quidproquo.rituals;
 //TODO TEST THE PENOR
 
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -12,20 +13,24 @@ public class SoftPenorRitual extends Ritual {
 
     @Override
     public void setup() {
-        addIngredient(Material.DIRT, 500);
+        /* addIngredient(Material.DIRT, 500);
         addIngredient(Material.BONE, 20);
         addIngredient(Material.REDSTONE, 15);
-        addIngredient(Material.WHEAT, 15);
+        addIngredient(Material.WHEAT, 15); */
+        addIngredient(Material.MOSSY_COBBLESTONE, 1);
         backfire = 0.10;
         name = "disfunction";
     }
 
     @Override
     public void execute(Player caster, Player target, Location location) {
-        Block shaft = target.getLocation().getBlock();
-        Block ball1 = shaft.getRelative(2, -1, 0);
-        Block ball2 = shaft.getRelative(-2,-1,0);
-        //TODO USE ELEGANT MATHEMATICS INSTEAD OF SCUFFED IF STATEMENTS
+        Bukkit.getLogger().info("Heetwerutrth3w4uti34ht");
+        Bukkit.getLogger().info(target.toString());
+        // Block shaft = target.getLocation().getBlock();
+        Location log = target.getLocation();
+        Block shaft = log.getBlock();
+        Block ball1 = shaft.getRelative(2, 0, -1);
+        Block ball2 = shaft.getRelative(-2, 0, -1);
         for(int d = 0; d < 8; d ++) {
             int x = 0;
             if(d < 3) x = 1;
@@ -33,13 +38,13 @@ public class SoftPenorRitual extends Ritual {
             int z = 0;
             if(d % 3 == 0) z = 1;
             if(d % 3 == 1) z = -1;
-            for(int y = 0; y < 5; y++) {
+            for(int y = 0; y < 15; y++) {
                 Block changingBlock = shaft.getRelative(x,y,z);
                 if(changingBlock.getType() == Material.AIR)
                     changingBlock.setType(Material.DIRT);
             }
         }
-        for(int x = 0; x < 3; x ++) {
+        /* for(int x = 0; x < 3; x ++) {
             for(int y = 0; y < 3; y ++) {
                 for(int z = 0; z < 3; z ++) {
                     Block changingBlock1 = ball1.getRelative(x,y,z);
@@ -50,6 +55,6 @@ public class SoftPenorRitual extends Ritual {
                         changingBlock1.setType(Material.DIRT);
                 }
             }
-        }
+        } */
     }
 }

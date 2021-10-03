@@ -12,6 +12,7 @@ public class HealRitual extends Ritual {
     public void setup() {
         addIngredient(Material.REDSTONE, 1);
         addIngredient(Material.WHEAT, 16);
+        addIngredient(Material.GOLD_NUGGET, 1);
         name = "healing";
     }
 
