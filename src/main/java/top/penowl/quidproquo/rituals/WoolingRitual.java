@@ -21,7 +21,6 @@ public class WoolingRitual extends Ritual {
 
     @Override
     public void execute(Player caster, Player target, Location location) {
-        caster.setHealth(Math.min(caster.getMaxHealth(), caster.getHealth()+2.0));
     }
     
 }

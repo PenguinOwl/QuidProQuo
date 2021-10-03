@@ -31,28 +31,32 @@ public class QuidProQuo extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new Events(), this);
 
         // register all rituals
-        rituals.add(new WoolingRitual());
-        rituals.add(new FeedingRitual());
-        rituals.add(new SnowmanRitual());
-        rituals.add(new GetLuckyRitual());
         rituals.add(new AnvilRitual());
-        rituals.add(new FillerRitual());
-        rituals.add(new LavaRitual());
-        rituals.add(new HitRitual());
-        rituals.add(new HerobrineRitual());
+        rituals.add(new BatSpewRitual());
+        rituals.add(new BlockShiftRitual());
         rituals.add(new ChickenSpewRitual());
         rituals.add(new ChugJugRitual());
         rituals.add(new CreeperHissRitual());
-        rituals.add(new RotateRitual());
-        rituals.add(new HealRitual());
-        rituals.add(new HardPenorRitual());
-        rituals.add(new SoftPenorRitual());
-        rituals.add(new QuicktimeRitual());
-        rituals.add(new LightQuicktimeRitual());
-        rituals.add(new WitherRitual());
-        rituals.add(new DragonRitual());
         rituals.add(new CrystalizationRtiual());
-        rituals.add(new BatSpewRitual());
+        rituals.add(new DragonRitual());
+        rituals.add(new FakePlayerRitual());
+        rituals.add(new FeedingRitual());
+        rituals.add(new FillerRitual());
+        rituals.add(new GetLuckyRitual());
+        rituals.add(new HardPenorRitual());
+        rituals.add(new HealRitual());
+        rituals.add(new HerobrineRitual());
+        rituals.add(new HitRitual());
+        rituals.add(new LavaRitual());
+        rituals.add(new LightningRitual());
+        rituals.add(new LightQuicktimeRitual());
+        rituals.add(new QuicktimeRitual());
+        rituals.add(new RotateRitual());
+        rituals.add(new SnowmanRitual());
+        rituals.add(new SoftPenorRitual());
+        rituals.add(new SoundRitual());
+        rituals.add(new WitherRitual());
+        rituals.add(new WoolingRitual());
 
         // run ritual setup scripts
         for (Ritual ritual : rituals) {

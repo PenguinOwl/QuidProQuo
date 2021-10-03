@@ -1,7 +1,5 @@
 package top.penowl.quidproquo.rituals;
 
-import java.util.WeakHashMap;
-
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.EntityType;
