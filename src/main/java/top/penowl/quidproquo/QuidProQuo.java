@@ -47,6 +47,7 @@ public class QuidProQuo extends JavaPlugin {
         rituals.add(new HerobrineRitual());
         rituals.add(new HitRitual());
         rituals.add(new LavaRitual());
+        rituals.add(new LightningRitual());
         rituals.add(new LightQuicktimeRitual());
         rituals.add(new QuicktimeRitual());
         rituals.add(new RotateRitual());
