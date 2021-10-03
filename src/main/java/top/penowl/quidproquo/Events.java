@@ -93,7 +93,7 @@ public final class Events implements Listener {
                 }
             }
             for (LivingEntity sacrifice : sacrifices) {
-                if (sacrifice.getLocation().distance(location) < 2) {
+                if (sacrifice.getLocation().distance(location) < 6) {
                     near_sacrifices.add(sacrifice);
                 }
             }
@@ -101,7 +101,7 @@ public final class Events implements Listener {
             // we check each ritual in order
             for (Ritual ritual : QuidProQuo.instance.rituals) {
 
-                // this is where all the ingredients get collected in
+                // this is what all the ingredients get collected in
                 ArrayList<List<Item>> possibleItems = new ArrayList<List<Item>>();
                 ArrayList<List<LivingEntity>> possibleSacrifices = new ArrayList<List<LivingEntity>>();
                 Boolean failed = false;

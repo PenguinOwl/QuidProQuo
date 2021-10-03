@@ -1,6 +1,7 @@
 package top.penowl.quidproquo;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,6 +31,7 @@ public class Commands implements CommandExecutor {
             return false;
         } else if (args[0].toLowerCase().equals("list")) {
             List<String> ritualNames = new ArrayList<String>(recipes.keySet());
+            Collections.sort(ritualNames);
             int max = ritualNames.size() - 1;
             int maxPages = max / 9;
             int page = 0;

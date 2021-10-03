@@ -14,6 +14,7 @@ public class CreeperHissRitual extends Ritual {
         addIngredient(Material.SULPHUR, 1);
         addIngredient(Material.REDSTONE, 1);
         addIngredient(Material.WHEAT, 16);
+        name = "creeper hissing";
         health = 1;
     }
 

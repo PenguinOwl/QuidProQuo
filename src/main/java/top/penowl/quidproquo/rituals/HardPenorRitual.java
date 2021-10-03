@@ -19,7 +19,7 @@ public class HardPenorRitual extends Ritual {
 
     @Override
     public void execute(Player caster, Player target, Location location) {
-        Block shaft = caster.getLocation().getBlock();
+        Block shaft = target.getLocation().getBlock();
         Block ball1 = shaft.getRelative(2, -1, 0);
         Block ball2 = shaft.getRelative(-2,-1,0);
         //TODO USE ELEGANT MATHEMATICS INSTEAD OF SCUFFED IF STATEMENTS
