@@ -34,7 +34,7 @@ public class BlockShiftRitual extends Ritual {
         addIngredient(Material.RED_MUSHROOM, 8);
         addIngredient(Material.BROWN_MUSHROOM, 8);
         addIngredient(Material.WHEAT, 32);
-        addIngredient(Material.ENDER_PEARL, 4);
+        addIngredient(Material.ENDER_PEARL, 1);
         name = "block shift";
     }
 
