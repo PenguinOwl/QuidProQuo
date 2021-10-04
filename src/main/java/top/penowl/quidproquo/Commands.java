@@ -34,10 +34,7 @@ public class Commands implements CommandExecutor {
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-		if (args.length < 1) {
-            // display help
-            return false;
-        } else if (args[0].toLowerCase().equals("list")) {
+		if (args.length < 1 || args[0].toLowerCase().equals("list")) {
             List<String> ritualNames = new ArrayList<String>(recipes.keySet());
             Collections.sort(ritualNames);
             int max = ritualNames.size() - 1;
