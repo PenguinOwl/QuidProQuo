@@ -36,6 +36,7 @@ public class BlockShiftRitual extends Ritual {
         addIngredient(Material.WHEAT, 32);
         addIngredient(Material.ENDER_PEARL, 1);
         name = "block shift";
+        health = 3;
     }
 
     @Override
