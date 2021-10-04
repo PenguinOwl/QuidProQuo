@@ -69,8 +69,8 @@ public class Commands implements CommandExecutor {
                     builder.append(" \n");
                     continue;
                 }
-                builder.append("\n" + ritualNames.get(i));
-                builder.color(net.md_5.bungee.api.ChatColor.GREEN);
+                builder.append("\n" + WordUtils.capitalizeFully(ritualNames.get(i)));
+                builder.color(net.md_5.bungee.api.ChatColor.GOLD);
                 builder.event(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/ritual " + ritualNames.get(i)));
                 builder.event(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder(ChatColor.YELLOW + "Click to see more...").create()));
             }
