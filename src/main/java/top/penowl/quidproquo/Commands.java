@@ -69,8 +69,12 @@ public class Commands implements CommandExecutor {
                     builder.append(" \n");
                     continue;
                 }
-                builder.append("\n" + WordUtils.capitalizeFully(ritualNames.get(i)));
-                builder.color(net.md_5.bungee.api.ChatColor.GOLD);
+                builder.append("\n" + WordUtils.capitalizeFully(ritualNames.get(i)) + " Ritual");
+                if (i % 2 == 0) {
+                    builder.color(net.md_5.bungee.api.ChatColor.GOLD);
+                } else {
+                    builder.color(net.md_5.bungee.api.ChatColor.YELLOW);
+                }
                 builder.event(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/ritual " + ritualNames.get(i)));
                 builder.event(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder(ChatColor.YELLOW + "Click to see more...").create()));
             }
@@ -81,29 +85,35 @@ public class Commands implements CommandExecutor {
             return true;
         } else if (recipes.containsKey(String.join(" ", args).toLowerCase())) {
             String key = String.join(" ", args).toLowerCase();
-            StringBuilder builder = new StringBuilder();
+            ComponentBuilder builder = new ComponentBuilder("");
             Ritual ritual = recipes.get(key);
-            builder.append("\n");
-            builder.append(ChatColor.DARK_RED + "======== " + ChatColor.YELLOW + WordUtils.capitalizeFully(key) + " Ritual" + ChatColor.DARK_RED + " ========\n ");
-            builder.append("\n" + ChatColor.GREEN + "" + ChatColor.BOLD + "Ingredients:\n");
+            builder.append("\n\n\n\n\n\n\n\n\n\n\n");
+            builder.append(ChatColor.DARK_RED + "   ==== " + ChatColor.YELLOW + WordUtils.capitalizeFully(key) + " Ritual" + ChatColor.DARK_RED + " ====  ");
+            builder.append("  [Back]");
+            builder.color(net.md_5.bungee.api.ChatColor.GOLD);
+            builder.event(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/rt list 1 d"));
+            builder.append("\n\n" + ChatColor.GREEN + "" + ChatColor.BOLD + "Ingredients:\n");
             for (Map.Entry<Material, Integer> entry : ritual.ingredients.entrySet()) {
-                builder.append(ChatColor.GOLD);
                 builder.append(WordUtils.capitalizeFully(entry.getKey().toString().replace('_', ' ').toLowerCase()));
+                builder.color(net.md_5.bungee.api.ChatColor.DARK_AQUA);
                 builder.append(": " + ChatColor.AQUA + entry.getValue().toString());
                 builder.append("\n");
             }
             if (ritual.sacrifices.size() > 0) {
                 builder.append(" \n" + ChatColor.RED + "" + ChatColor.BOLD + "Sacrifices:\n");
                 for (Map.Entry<EntityType, Integer> entry : ritual.sacrifices.entrySet()) {
-                    builder.append(ChatColor.GOLD);
                     builder.append(WordUtils.capitalizeFully(entry.getKey().toString().replace('_', ' ').toLowerCase()));
+                    builder.color(net.md_5.bungee.api.ChatColor.DARK_AQUA);
                     builder.append(": " + ChatColor.AQUA + entry.getValue().toString());
                     builder.append("\n");
                 }
             }
             builder.append(" \n" + ChatColor.YELLOW + "" + ChatColor.BOLD + "Blood: " + ChatColor.RESET + "" + ChatColor.AQUA + String.valueOf(ritual.health / 2.0) + ChatColor.RED + " ♥\n");
             builder.append(ChatColor.YELLOW + "" + ChatColor.BOLD + "Backfire: " + ChatColor.RESET + "" + ChatColor.AQUA + String.valueOf(Math.round(ritual.backfire * 100)) + "%\n");
-            sender.sendMessage(builder.toString());
+            if (sender instanceof Player) {
+                Player playerSender = (Player) sender;
+                playerSender.spigot().sendMessage(builder.create());
+            }
             return true;
         }
         return false;
