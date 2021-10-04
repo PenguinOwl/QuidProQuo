@@ -25,11 +25,10 @@ public class RSpawnEggRitual extends Ritual {
 
     @Override
     public void setup() {
-        /* addIngredient(Material.EGG, 16);
-        addIngredient(Material.WHEAT, 64); */
-        addIngredient(Material.MOSSY_COBBLESTONE, 1);
+        addIngredient(Material.EGG, 16);
+        addIngredient(Material.WHEAT, 64);
         name = "egging";
-        // health = 2;
+        health = 2;
     }
 
     @Override
