@@ -1,7 +1,5 @@
 package top.penowl.quidproquo.rituals;
-//TODO TEST THE PENOR
 
-import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -13,11 +11,10 @@ public class SoftPenorRitual extends Ritual {
 
     @Override
     public void setup() {
-        /* addIngredient(Material.DIRT, 500);
-        addIngredient(Material.BONE, 20);
-        addIngredient(Material.REDSTONE, 15);
-        addIngredient(Material.WHEAT, 15); */
-        addIngredient(Material.MOSSY_COBBLESTONE, 1);
+        addIngredient(Material.SAND, 1);
+        addIngredient(Material.BONE, 1);
+        addIngredient(Material.REDSTONE, 16);
+        addIngredient(Material.WHEAT, 32);
         backfire = 0.10;
         name = "disfunction";
     }
