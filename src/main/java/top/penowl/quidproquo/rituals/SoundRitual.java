@@ -11,10 +11,11 @@ import top.penowl.quidproquo.Ritual;
 public class SoundRitual extends Ritual {
     @Override
     public void setup() {
-       addIngredient(Material.NOTE_BLOCK, 1);
-       addIngredient(Material.WHEAT, 4);
-       name = "shadow sound";
-       health = 1;
+        addIngredient(Material.NOTE_BLOCK, 1);
+        addIngredient(Material.WHEAT, 4);
+        name = "shadow sound";
+        health = 1;
+        notify = false;
     }
 
     @Override

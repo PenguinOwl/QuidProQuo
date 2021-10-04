@@ -21,6 +21,7 @@ public class FakePlayerRitual extends Ritual {
         addIngredient(Material.WHEAT, 32);
         addIngredient(Material.LEAVES, 32);
         name = "player illusion";
+        notify = false;
     }
 
     @Override

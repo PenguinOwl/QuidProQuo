@@ -204,8 +204,17 @@ public final class Events implements Listener {
 
                 // backfire check, if succeeds then the ritual gets reversed
                 if(new Random().nextDouble() >= ritual.backfire) {
+                    if (ritual.notify && otherPlayer.getUniqueId() != player.getUniqueId()) {
+                        otherPlayer.sendMessage(ChatColor.YELLOW + "You were hit by a " + ritual.name + " ritual!");
+                    }
                     ritual.execute(player, otherPlayer, block.getLocation());
                 } else {
+                    if (ritual.notify) {
+                        if (otherPlayer.getUniqueId() != player.getUniqueId()) {
+                            otherPlayer.sendMessage(ChatColor.YELLOW + "Someone tried to enact a " + ritual.name + " ritual on you but it backfired!");
+                        }
+                        player.sendMessage(ChatColor.YELLOW + "The ritual backfired on you!");
+                    }
                     ritual.execute(otherPlayer, player, block.getLocation());
                 }
                 

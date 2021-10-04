@@ -15,6 +15,7 @@ public class HitRitual extends Ritual {
        addIngredient(Material.WHEAT, 9);
        name = "shadow hit";
        health = 1;
+       notify = false;
     }
 
     @Override

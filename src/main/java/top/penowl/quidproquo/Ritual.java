@@ -32,8 +32,13 @@ public abstract class Ritual {
     // whether you want a lightning effect
     public Boolean lightning = false;
 
+    // whether the target is notified
+    public Boolean notify = true;
+
     // the actual effect that gets triggered
     public abstract void execute(Player caster, Player target, Location location);
+
+    public void handleByproducts(ArrayList<ItemStack> extra) {}
 
     // add an ingredient to the recipe (type and count)
     public void addIngredient(Material material, int count) {

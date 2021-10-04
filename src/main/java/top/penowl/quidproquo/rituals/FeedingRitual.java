@@ -18,6 +18,7 @@ public class FeedingRitual extends Ritual {
 
     @Override
     public void execute(Player caster, Player target, Location location) {
+        target.setFoodLevel(20);
         caster.setFoodLevel(20);
     }
     

@@ -17,6 +17,7 @@ public class WoolingRitual extends Ritual {
         name = "wooling";
         health = 2;
         byproducts.add(new ItemStack(Material.WOOL, 100));
+        notify = false;
     }
 
     @Override

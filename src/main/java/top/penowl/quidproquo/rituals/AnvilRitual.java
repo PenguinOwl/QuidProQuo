@@ -19,6 +19,7 @@ public class AnvilRitual extends Ritual {
         name = "anviling";
         health = 5;
         backfire = 0.5;
+        notify = false;
     }
 
     @Override

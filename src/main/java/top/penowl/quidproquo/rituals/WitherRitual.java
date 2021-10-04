@@ -18,6 +18,8 @@ public class WitherRitual extends Ritual {
         addIngredient(Material.SAND, 1);
         name = "wither summoning";
         health = 2;
+        notify = false;
+        lightning = true;
     }
 
     @Override

@@ -5,7 +5,7 @@ commands:
   ritual:
     description: Check ritual information.
     aliases: [quidproquo, rt]
-    permission: quidproquo.command
+    # permission: quidproquo.command
     permission-message: You do not have /&lt;permission&gt;
     usage: |
       §3/ritual list [page] - List all available rituals.

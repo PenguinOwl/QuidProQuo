@@ -17,6 +17,7 @@ public class CrystalizationRtiual extends Ritual {
         addIngredient(Material.WHEAT, 32);
         name = "crystalization";
         health = 2;
+        notify = false;
     }
 
     @Override

@@ -17,6 +17,7 @@ public class RotateRitual extends Ritual {
         health = 4;
         backfire = 0.05;
         name = "rotation";
+        notify = false;
     }
 
     @Override

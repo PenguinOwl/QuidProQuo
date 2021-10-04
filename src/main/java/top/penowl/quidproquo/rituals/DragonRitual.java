@@ -21,6 +21,7 @@ public class DragonRitual extends Ritual {
         addIngredient(Material.DIAMOND_BLOCK, 1);
         name = "dragon summoning";
         health = 3;
+        lightning = true;
     }
 
     @Override

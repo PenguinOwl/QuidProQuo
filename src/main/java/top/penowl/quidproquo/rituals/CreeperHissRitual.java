@@ -16,6 +16,7 @@ public class CreeperHissRitual extends Ritual {
         addIngredient(Material.WHEAT, 16);
         name = "creeper hissing";
         health = 1;
+        notify = false;
     }
 
     @Override

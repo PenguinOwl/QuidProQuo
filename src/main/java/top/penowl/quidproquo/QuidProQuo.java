@@ -56,6 +56,9 @@ public class QuidProQuo extends JavaPlugin {
         rituals.add(new SoundRitual());
         rituals.add(new WitherRitual());
         rituals.add(new WoolingRitual());
+        rituals.add(new MidasRitual());
+        rituals.add(new SummoningRitual());
+        rituals.add(new GBJRitual());
 
         // run ritual setup scripts
         for (Ritual ritual : rituals) {

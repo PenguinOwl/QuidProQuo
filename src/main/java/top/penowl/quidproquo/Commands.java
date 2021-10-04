@@ -65,12 +65,14 @@ public class Commands implements CommandExecutor {
                 builder.append(": " + ChatColor.AQUA + entry.getValue().toString());
                 builder.append("\n");
             }
-            builder.append(" \n" + ChatColor.RED + "" + ChatColor.BOLD + "Sacrifices:\n");
-            for (Map.Entry<EntityType, Integer> entry : ritual.sacrifices.entrySet()) {
-                builder.append(ChatColor.GOLD);
-                builder.append(WordUtils.capitalizeFully(entry.getKey().toString().replace('_', ' ').toLowerCase()));
-                builder.append(": " + ChatColor.AQUA + entry.getValue().toString());
-                builder.append("\n");
+            if (ritual.sacrifices.size() > 0) {
+                builder.append(" \n" + ChatColor.RED + "" + ChatColor.BOLD + "Sacrifices:\n");
+                for (Map.Entry<EntityType, Integer> entry : ritual.sacrifices.entrySet()) {
+                    builder.append(ChatColor.GOLD);
+                    builder.append(WordUtils.capitalizeFully(entry.getKey().toString().replace('_', ' ').toLowerCase()));
+                    builder.append(": " + ChatColor.AQUA + entry.getValue().toString());
+                    builder.append("\n");
+                }
             }
             builder.append(" \n" + ChatColor.YELLOW + "" + ChatColor.BOLD + "Blood: " + ChatColor.RESET + "" + ChatColor.AQUA + String.valueOf(ritual.health / 2.0) + ChatColor.RED + " ♥\n");
             builder.append(ChatColor.YELLOW + "" + ChatColor.BOLD + "Backfire: " + ChatColor.RESET + "" + ChatColor.AQUA + String.valueOf(Math.round(ritual.backfire * 100)) + "%\n");

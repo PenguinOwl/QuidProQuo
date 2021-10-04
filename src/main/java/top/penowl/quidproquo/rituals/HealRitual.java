@@ -18,7 +18,8 @@ public class HealRitual extends Ritual {
 
     @Override
     public void execute(Player caster, Player target, Location location) {
-        caster.setHealth(Math.min(caster.getMaxHealth(), caster.getHealth()+8.0));
+        caster.setHealth(Math.min(caster.getMaxHealth(), caster.getHealth()+4.0));
+        target.setHealth(Math.min(caster.getMaxHealth(), caster.getHealth()+4.0));
     }
     
 }

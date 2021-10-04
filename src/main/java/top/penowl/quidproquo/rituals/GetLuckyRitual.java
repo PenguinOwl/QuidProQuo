@@ -17,6 +17,7 @@ public class GetLuckyRitual extends Ritual {
         health = 3;
         lightning = true;
         name = "daring";
+        notify = false;
     }
 
     @Override
