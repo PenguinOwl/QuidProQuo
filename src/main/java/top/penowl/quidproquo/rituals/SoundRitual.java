@@ -5,7 +5,6 @@ import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import java.util.Random;
-
 import top.penowl.quidproquo.Ritual;
 
 public class SoundRitual extends Ritual {

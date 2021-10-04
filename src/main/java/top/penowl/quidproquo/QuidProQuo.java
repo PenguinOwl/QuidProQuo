@@ -42,23 +42,24 @@ public class QuidProQuo extends JavaPlugin {
         rituals.add(new FakePlayerRitual());
         rituals.add(new FeedingRitual());
         rituals.add(new FillerRitual());
+        rituals.add(new GBJRitual());
         rituals.add(new GetLuckyRitual());
+        rituals.add(new HardPenorRitual());
         rituals.add(new HealRitual());
         rituals.add(new HerobrineRitual());
         rituals.add(new HitRitual());
         rituals.add(new LavaRitual());
-        rituals.add(new LightningRitual());
         rituals.add(new LightQuicktimeRitual());
+        rituals.add(new LightningRitual());
+        rituals.add(new MidasRitual());
         rituals.add(new QuicktimeRitual());
         rituals.add(new RotateRitual());
         rituals.add(new SnowmanRitual());
         rituals.add(new SoftPenorRitual());
         rituals.add(new SoundRitual());
+        rituals.add(new SummoningRitual());
         rituals.add(new WitherRitual());
         rituals.add(new WoolingRitual());
-        rituals.add(new MidasRitual());
-        rituals.add(new SummoningRitual());
-        rituals.add(new GBJRitual());
 
         // run ritual setup scripts
         for (Ritual ritual : rituals) {

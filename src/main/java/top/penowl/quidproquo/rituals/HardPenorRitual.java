@@ -15,7 +15,6 @@ public class HardPenorRitual extends Ritual {
         addIngredient(Material.BONE, 1);
         addIngredient(Material.REDSTONE, 16);
         addIngredient(Material.WHEAT, 32);
-        backfire = 0.10;
         name = "erection";
     }
 
@@ -34,7 +33,7 @@ public class HardPenorRitual extends Ritual {
             for(int y = 0; y < 12; y++) {
                 Block changingBlock = shaft.getRelative(x,y,z);
                 if(changingBlock.getType() == Material.AIR)
-                    changingBlock.setType(Material.SAND);
+                    changingBlock.setType(Material.COBBLESTONE);
             }
         }
         for(int x = 0; x < 3; x ++) {
@@ -43,9 +42,9 @@ public class HardPenorRitual extends Ritual {
                     Block changingBlock1 = ball1.getRelative(x,y,z);
                     Block changingBlock2 = ball2.getRelative(x*-1,y,z);
                     if(changingBlock1.getType() == Material.AIR)
-                        changingBlock1.setType(Material.SAND);
+                        changingBlock1.setType(Material.COBBLESTONE);
                     if(changingBlock2.getType() == Material.AIR)
-                        changingBlock2.setType(Material.SAND);
+                        changingBlock2.setType(Material.COBBLESTONE);
                 }
             }
         }
