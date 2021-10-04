@@ -1,5 +1,6 @@
 package top.penowl.quidproquo.rituals;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -42,10 +43,12 @@ public class BlockShiftRitual extends Ritual {
         Random random = new Random();
         Material fromMat = pMat[random.nextInt(65)];
         Material toMat = pMat[random.nextInt(65)];
+        target.sendMessage(ChatColor.YELLOW + fromMat.toString() + " is " + toMat.toString() + "!");
+        Block block = target.getLocation().getBlock();
         for(int x = -12; x <= 12; x ++) {
             for(int y = -12; y <= 12; y ++) {
                 for(int z = -12; z <= 12; z ++) {
-                    Block testBlock = target.getLocation().getBlock().getRelative(x, y, z);
+                    Block testBlock = block.getRelative(x, y, z);
                     if(testBlock.getType() == fromMat)
                         testBlock.setType(toMat);
                 }
