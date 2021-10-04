@@ -10,3 +10,4 @@ commands:
     usage: |
       §3/ritual list [page] - List all available rituals.
       §3/ritual <ritual> - See the information on a ritual
+      §3/ritual help - See this page
