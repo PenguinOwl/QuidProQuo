@@ -42,9 +42,15 @@ public class BlockShiftRitual extends Ritual {
     @Override
     public void execute(Player caster, Player target, Location location) {
         Random random = new Random();
-        Material fromMat = pMat[random.nextInt(65)];
-        Material toMat = pMat[random.nextInt(65)];
-        target.sendMessage(ChatColor.YELLOW + fromMat.toString() + " is " + toMat.toString() + "!");
+        Material fromMat = pMat[random.nextInt(pMat.length)];
+        Material toMat = pMat[random.nextInt(pMat.length)];
+        Material chosenMat;
+        if (Math.random() > 0.5) {
+            chosenMat = fromMat;
+        } else {
+            chosenMat = toMat;
+        }
+        target.sendMessage(ChatColor.YELLOW + "You sense that reality has shifted. You see " + chosenMat.toString().replace("_", " ") + " in glowing letters.");
         Block block = target.getLocation().getBlock();
         for(int x = -12; x <= 12; x ++) {
             for(int y = -12; y <= 12; y ++) {
