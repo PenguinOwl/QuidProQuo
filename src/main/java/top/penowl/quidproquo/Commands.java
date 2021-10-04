@@ -13,6 +13,14 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.EntityType;
+import org.bukkit.entity.Player;
+import org.dom4j.Text;
+
+import net.md_5.bungee.api.chat.BaseComponent;
+import net.md_5.bungee.api.chat.ClickEvent;
+import net.md_5.bungee.api.chat.ComponentBuilder;
+import net.md_5.bungee.api.chat.HoverEvent;
+import net.md_5.bungee.api.chat.TextComponent;
 
 public class Commands implements CommandExecutor {
 
@@ -39,18 +47,40 @@ public class Commands implements CommandExecutor {
                 page = Math.min(Math.max(Integer.parseInt(args[1]) - 1, 0), maxPages);
             } catch(Exception e) {
             }
-            StringBuilder builder = new StringBuilder();
-            builder.append(ChatColor.DARK_PURPLE + "======== Rituals ========    " + ChatColor.YELLOW + "Page " + String.valueOf(page + 1) + " / " + String.valueOf(maxPages + 1));
-            builder.append("\n" + ChatColor.GREEN);
+            ComponentBuilder builder = new ComponentBuilder("");
+            builder.append(ChatColor.DARK_PURPLE + "======== Rituals ========   ");
+            if (page != 0) {
+                builder.append(" <  ");
+                builder.color(net.md_5.bungee.api.ChatColor.YELLOW);
+                builder.event(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/rt list " + String.valueOf(page)));
+            } else {
+                builder.append(" <  ");
+                builder.color(net.md_5.bungee.api.ChatColor.GRAY);
+            }
+            builder.append("Page " + String.valueOf(page + 1) + " / " + String.valueOf(maxPages + 1) + " ");
+            builder.color(net.md_5.bungee.api.ChatColor.AQUA);
+            if (page != maxPages) {
+                builder.append("  > ");
+                builder.color(net.md_5.bungee.api.ChatColor.YELLOW);
+                builder.event(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/rt list " + String.valueOf(page + 2)));
+            } else {
+                builder.append("  > ");
+                builder.color(net.md_5.bungee.api.ChatColor.GRAY);
+            }
             for (int i = page * 9; i < page * 9 + 9; i++) {
                 if (i > max) {
                     builder.append(" \n");
                     continue;
                 }
-                builder.append(ritualNames.get(i));
-                builder.append("\n" + ChatColor.GREEN);
+                builder.append("\n" + ritualNames.get(i));
+                builder.color(net.md_5.bungee.api.ChatColor.GREEN);
+                builder.event(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/ritual " + ritualNames.get(i)));
+                builder.event(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder(ChatColor.YELLOW + "Click to see more...").create()));
             }
-            sender.sendMessage(builder.toString());
+            if (sender instanceof Player) {
+                Player playerSender = (Player) sender;
+                playerSender.spigot().sendMessage(builder.create());
+            }
             return true;
         } else if (recipes.containsKey(String.join(" ", args).toLowerCase())) {
             String key = String.join(" ", args).toLowerCase();

@@ -1,10 +1,12 @@
 package top.penowl.quidproquo;
 import java.lang.reflect.Constructor;
+import java.nio.Buffer;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
 import java.util.UUID;
 
+import org.bukkit.Bukkit;
 import org.bukkit.event.HandlerList;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.reflections.Reflections;
@@ -38,10 +40,13 @@ public class QuidProQuo extends JavaPlugin {
         for (Class<? extends Ritual> ritualClass : subClasses) {
             Class<?>[] params = {};
             try {
-                Constructor<? extends Ritual> constructor = ritualClass.getConstructor(params);
-                Object[] args = {};
-                rituals.add(constructor.newInstance(args));
+                if (ritualClass.getField("enabled").getBoolean(null)) {
+                    Constructor<? extends Ritual> constructor = ritualClass.getConstructor(params);
+                    Object[] args = {};
+                    rituals.add(constructor.newInstance(args));
+                }
             } catch (Exception e) {
+                System.out.println(e.toString());
             }
         }
 

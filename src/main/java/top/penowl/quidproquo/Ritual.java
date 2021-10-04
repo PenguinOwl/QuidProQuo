@@ -11,6 +11,9 @@ import org.bukkit.inventory.ItemStack;
 
 public abstract class Ritual {
 
+    // whether the ritual is enabled, shouldn't change during runtime
+    public static boolean enabled = true;
+
     // ingredients, map of type to count
     public HashMap<Material, Integer> ingredients = new HashMap<Material, Integer>();
 

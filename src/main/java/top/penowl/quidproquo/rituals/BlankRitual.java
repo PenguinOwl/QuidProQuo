@@ -7,6 +7,8 @@ import top.penowl.quidproquo.Ritual;
 
 public class BlankRitual extends Ritual {
 
+    public static boolean enabled = false;
+
     @Override
     public void setup() {
 
