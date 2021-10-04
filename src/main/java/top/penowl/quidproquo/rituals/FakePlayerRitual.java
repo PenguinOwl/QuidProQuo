@@ -38,6 +38,7 @@ public class FakePlayerRitual extends Ritual {
         fp_livingEntity.setHealth(100.0);
         fp_livingEntity.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 100));
         fp_livingEntity.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 1));
+        fp_livingEntity.setCustomNameVisible(true);
         Slime fpSlime = (Slime)fp_livingEntity;
         fpSlime.setSize(1);
     }

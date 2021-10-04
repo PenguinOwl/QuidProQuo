@@ -60,7 +60,7 @@ public final class Events implements Listener {
             }
             Collections.sort(uuids);
 
-            player.playSound(location, Sound.CLICK, 1, 1);
+            player.playSound(location, Sound.CLICK, 0.5f, 1);
             if (uuids.size() == 0) {
                 player.sendMessage(ChatColor.YELLOW + "No targets online!");
             } else {
