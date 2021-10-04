@@ -12,6 +12,7 @@ import java.util.stream.Collectors;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Effect;
+import org.bukkit.GameMode;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.OfflinePlayer;
@@ -59,6 +60,7 @@ public final class Events implements Listener {
             }
             Collections.sort(uuids);
 
+            player.playSound(location, Sound.CLICK, 1, 1);
             if (uuids.size() == 0) {
                 player.sendMessage(ChatColor.YELLOW + "No targets online!");
             } else {
@@ -72,10 +74,9 @@ public final class Events implements Listener {
                 } else {
                     QuidProQuo.instance.targets.put(playerUuid, uuids.get(0));
                 }
+                // friendly message
+                player.sendMessage(ChatColor.YELLOW + "Switched target to " + Bukkit.getPlayer(QuidProQuo.instance.targets.get(playerUuid)).getName());
             }
-
-            // friendly message
-            player.sendMessage(ChatColor.YELLOW + "Switched target to " + Bukkit.getPlayer(QuidProQuo.instance.targets.get(playerUuid)).getName());
 
         } else {
 
@@ -162,7 +163,9 @@ public final class Events implements Listener {
                 }
 
                 // administer health penalty
-                player.setHealth(Math.max(0, player.getHealth() - ritual.health));
+                if (player.getGameMode() != GameMode.CREATIVE && player.getGameMode() != GameMode.SPECTATOR) {
+                    player.setHealth(Math.max(0, player.getHealth() - ritual.health));
+                }
 
                 // shiny message
                 player.sendMessage(ChatColor.GREEN + "You enacted a " + ritual.name + " ritual.");
