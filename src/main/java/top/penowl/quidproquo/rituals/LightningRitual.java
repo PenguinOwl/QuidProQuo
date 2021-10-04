@@ -14,7 +14,7 @@ public class LightningRitual extends Ritual {
     @Override
     public void setup() {
         addIngredient(Material.WHEAT, 64);
-        addIngredient(Material.GLOWSTONE, 64);
+        addIngredient(Material.GLOWSTONE, 16);
         name = "lightning location";
     }
 

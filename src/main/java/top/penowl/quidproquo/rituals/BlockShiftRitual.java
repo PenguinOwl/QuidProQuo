@@ -20,7 +20,7 @@ public class BlockShiftRitual extends Ritual {
         Material.DIAMOND_ORE, Material.DIAMOND_BLOCK, Material.REDSTONE_ORE, Material.ICE,
         Material.SNOW_BLOCK, Material.CLAY, Material.PUMPKIN, Material.NETHERRACK,
         Material.SOUL_SAND, Material.GLOWSTONE, Material.JACK_O_LANTERN, Material.STAINED_GLASS,
-        Material.MONSTER_EGG, Material.SMOOTH_BRICK, Material.HUGE_MUSHROOM_1,
+        Material.MONSTER_EGGS, Material.SMOOTH_BRICK, Material.HUGE_MUSHROOM_1,
         Material.HUGE_MUSHROOM_2, Material.MELON_BLOCK, Material.MYCEL, Material.NETHER_BRICK,
         Material.ENDER_STONE, Material.EMERALD_ORE, Material.EMERALD_BLOCK, Material.REDSTONE_BLOCK,
         Material.QUARTZ_ORE, Material.QUARTZ_BLOCK, Material.STAINED_CLAY, Material.LEAVES,
