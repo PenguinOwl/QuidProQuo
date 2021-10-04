@@ -33,8 +33,8 @@ public class QuidProQuo extends JavaPlugin {
         getLogger().info("Loading rituals...");
         getServer().getPluginManager().registerEvents(new Events(), this);
 
+        // auto-register rituals
         Set<Class<? extends Ritual>> subClasses = (new Reflections()).getSubTypesOf(Ritual.class);
-
         for (Class<? extends Ritual> ritualClass : subClasses) {
             Class<?>[] params = {};
             try {
