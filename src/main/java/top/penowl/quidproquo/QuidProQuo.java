@@ -1,17 +1,13 @@
 package top.penowl.quidproquo;
 import java.lang.reflect.Constructor;
-import java.nio.Buffer;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
 import java.util.UUID;
 
-import org.bukkit.Bukkit;
 import org.bukkit.event.HandlerList;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.reflections.Reflections;
-
-import top.penowl.quidproquo.rituals.*;
 
 public class QuidProQuo extends JavaPlugin {
 

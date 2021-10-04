@@ -14,13 +14,10 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
-import org.dom4j.Text;
 
-import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.ComponentBuilder;
 import net.md_5.bungee.api.chat.HoverEvent;
-import net.md_5.bungee.api.chat.TextComponent;
 
 public class Commands implements CommandExecutor {
 
@@ -45,11 +42,14 @@ public class Commands implements CommandExecutor {
             } catch(Exception e) {
             }
             ComponentBuilder builder = new ComponentBuilder("");
-            builder.append(ChatColor.DARK_PURPLE + "======== Rituals ========   ");
+            if (args.length > 2 && args[2].equals("d")) {
+                builder.append("\n\n\n\n\n\n\n\n\n\n");
+            }
+            builder.append(ChatColor.DARK_PURPLE + "    ======= " + ChatColor.LIGHT_PURPLE + "Rituals" + ChatColor.DARK_PURPLE + " =======    ");
             if (page != 0) {
                 builder.append(" <  ");
                 builder.color(net.md_5.bungee.api.ChatColor.YELLOW);
-                builder.event(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/rt list " + String.valueOf(page)));
+                builder.event(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/rt list " + String.valueOf(page) + " d"));
             } else {
                 builder.append(" <  ");
                 builder.color(net.md_5.bungee.api.ChatColor.GRAY);
@@ -59,7 +59,7 @@ public class Commands implements CommandExecutor {
             if (page != maxPages) {
                 builder.append("  > ");
                 builder.color(net.md_5.bungee.api.ChatColor.YELLOW);
-                builder.event(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/rt list " + String.valueOf(page + 2)));
+                builder.event(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/rt list " + String.valueOf(page + 2) + " d"));
             } else {
                 builder.append("  > ");
                 builder.color(net.md_5.bungee.api.ChatColor.GRAY);
