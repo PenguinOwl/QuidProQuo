@@ -26,12 +26,12 @@ public class BlockShiftRitual extends Ritual {
         Material.QUARTZ_ORE, Material.QUARTZ_BLOCK, Material.STAINED_CLAY, Material.LEAVES,
         Material.LOG, Material.SLIME_BLOCK, Material.PRISMARINE, Material.SEA_LANTERN,
         Material.HAY_BLOCK, Material.CLAY_BRICK, Material.COAL_BLOCK, Material.PACKED_ICE,
-        Material.RED_SANDSTONE
+        Material.RED_SANDSTONE, Material.AIR
     };
     @Override
     public void setup() {
-        addIngredient(Material.RED_MUSHROOM, 32);
-        addIngredient(Material.BROWN_MUSHROOM, 32);
+        addIngredient(Material.RED_MUSHROOM, 8);
+        addIngredient(Material.BROWN_MUSHROOM, 8);
         addIngredient(Material.WHEAT, 32);
         addIngredient(Material.ENDER_PEARL, 4);
         name = "block shift";
@@ -40,11 +40,11 @@ public class BlockShiftRitual extends Ritual {
     @Override
     public void execute(Player caster, Player target, Location location) {
         Random random = new Random();
-        Material fromMat = pMat[random.nextInt(64)];
-        Material toMat = pMat[random.nextInt(64)];
-        for(int x = -5; x <= 5; x ++) {
-            for(int y = -5; y <= 5; y ++) {
-                for(int z = -5; z <= 5; z ++) {
+        Material fromMat = pMat[random.nextInt(65)];
+        Material toMat = pMat[random.nextInt(65)];
+        for(int x = -12; x <= 12; x ++) {
+            for(int y = -12; y <= 12; y ++) {
+                for(int z = -12; z <= 12; z ++) {
                     Block testBlock = target.getLocation().getBlock().getRelative(x, y, z);
                     if(testBlock.getType() == fromMat)
                         testBlock.setType(toMat);
