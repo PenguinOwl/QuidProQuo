@@ -44,6 +44,8 @@ public final class Events implements Listener {
         // skip if we didn't click an altar
         if (!Altar.CheckAltar(block.getLocation())) return;
 
+        event.setCancelled(true);
+
         // cycle targets if player is sneaking, otherwise try to enact a ritual
         if (player.isSneaking()) {
 
