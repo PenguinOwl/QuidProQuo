@@ -56,7 +56,7 @@ public class BlockShiftRitual extends Ritual {
         }
         target.sendMessage(ChatColor.YELLOW + "You sense that reality has shifted. You see " + ChatColor.GOLD + chosenMat.toString().replace("_", " ") + ChatColor.YELLOW + " in glowing letters.");
         if (target.getUniqueId() != caster.getUniqueId()) {
-            caster.sendMessage(ChatColor.YELLOW + "You sense that reality has shifted. You hear " + ChatColor.GOLD + chosenMat.toString().replace("_", " ") + ChatColor.YELLOW + " in the distance.");
+            caster.sendMessage(ChatColor.YELLOW + "You sense that reality has shifted. You hear " + ChatColor.GOLD + otherMaterial.toString().replace("_", " ") + ChatColor.YELLOW + " in the distance.");
         }
         Block block = target.getLocation().getBlock();
         for(int x = -12; x <= 12; x ++) {
