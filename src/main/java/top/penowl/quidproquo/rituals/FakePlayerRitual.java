@@ -2,13 +2,13 @@ package top.penowl.quidproquo.rituals;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Slime;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
+import org.bukkit.inventory.EntityEquipment;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.SkullMeta;
 
 import java.util.Random;
 
@@ -32,18 +32,17 @@ public class FakePlayerRitual extends Ritual {
         int x = random.nextInt(51) - 25;
         int y = random.nextInt(51) - 25;
         int z = random.nextInt(51) - 25;
-        Entity fakePlayer = target.getWorld().spawnEntity(loc.clone().add(x, y, z), EntityType.SLIME);
-        LivingEntity fp_livingEntity = (LivingEntity)fakePlayer;
-        fp_livingEntity.setMaxHealth(100.0);
-        fp_livingEntity.setHealth(100.0);
-        fp_livingEntity.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 100));
-        fp_livingEntity.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 200, 1));
-        Entity armorStand = target.getWorld().spawnEntity(loc.clone().add(x, y, z), EntityType.ARMOR_STAND);
+        Slime slime = (Slime)target.getWorld().spawnEntity(loc.clone().add(x, y, z), EntityType.SLIME);
+        LivingEntity armorStand = (LivingEntity)target.getWorld().spawnEntity(loc.clone().add(x, y, z), EntityType.ARMOR_STAND);
         armorStand.setCustomName(caster.getName());
         armorStand.setCustomNameVisible(true);
-        fp_livingEntity.setPassenger(armorStand);
-        Slime fpSlime = (Slime)fp_livingEntity;
-        fpSlime.setSize(1);
+        slime.setPassenger(armorStand);
+        slime.setSize(1);
+        EntityEquipment equipment = armorStand.getEquipment();
+        ItemStack skull = new ItemStack(Material.SKULL);
+        SkullMeta meta = (SkullMeta)skull;
+        meta.setOwner(caster.getName());
+        equipment.setHelmet(skull);
     }
     
 }
