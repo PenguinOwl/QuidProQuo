@@ -46,12 +46,18 @@ public class BlockShiftRitual extends Ritual {
         Material fromMat = pMat[random.nextInt(pMat.length)];
         Material toMat = pMat[random.nextInt(pMat.length)];
         Material chosenMat;
+        Material otherMaterial;
         if (Math.random() > 0.5) {
             chosenMat = fromMat;
+            otherMaterial = toMat;
         } else {
             chosenMat = toMat;
+            otherMaterial = fromMat;
         }
-        target.sendMessage(ChatColor.YELLOW + "You sense that reality has shifted. You see " + chosenMat.toString().replace("_", " ") + " in glowing letters.");
+        target.sendMessage(ChatColor.YELLOW + "You sense that reality has shifted. You see " + ChatColor.GOLD + chosenMat.toString().replace("_", " ") + ChatColor.YELLOW + " in glowing letters.");
+        if (target.getUniqueId() != caster.getUniqueId()) {
+            caster.sendMessage(ChatColor.YELLOW + "You sense that reality has shifted. You hear " + ChatColor.GOLD + chosenMat.toString().replace("_", " ") + ChatColor.YELLOW + " in the distance.");
+        }
         Block block = target.getLocation().getBlock();
         for(int x = -12; x <= 12; x ++) {
             for(int y = -12; y <= 12; y ++) {
