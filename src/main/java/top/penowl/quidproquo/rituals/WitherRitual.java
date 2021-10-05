@@ -14,7 +14,7 @@ public class WitherRitual extends Ritual {
         addIngredient(Material.BONE, 64);
         addIngredient(Material.WHEAT, 64*9);
         addSacrifice(EntityType.SKELETON, 1);
-        addIngredient(Material.FLOWER_POT, 1);
+        addIngredient(Material.FLOWER_POT_ITEM, 1);
         addIngredient(Material.SAND, 1);
         name = "wither summoning";
         health = 2;

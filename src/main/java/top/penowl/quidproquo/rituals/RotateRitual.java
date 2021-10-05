@@ -25,6 +25,7 @@ public class RotateRitual extends Ritual {
     public void execute(Player caster, Player target, Location location) {
         Location targetLocation = target.getLocation();
         targetLocation.setDirection(targetLocation.getDirection().multiply(-1));
+        target.teleport(targetLocation);
     }
     
 }

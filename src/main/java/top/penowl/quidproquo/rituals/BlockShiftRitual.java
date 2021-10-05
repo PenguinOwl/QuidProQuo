@@ -13,7 +13,7 @@ public class BlockShiftRitual extends Ritual {
     //possible mats
     private static final Material[] pMat = {
         Material.STONE, Material.GRASS, Material.DIRT, Material.COBBLESTONE, Material.WOOD,
-        Material.WATER, Material.LAVA, Material.SAND, Material.GRAVEL, Material.GOLD_ORE,
+        Material.STATIONARY_WATER, Material.LAVA, Material.SAND, Material.GRAVEL, Material.GOLD_ORE,
         Material.IRON_ORE, Material.COAL_ORE, Material.LOG, Material.LEAVES, Material.SPONGE,
         Material.GLASS, Material.LAPIS_ORE, Material.LAPIS_BLOCK, Material.SANDSTONE,
         Material.WEB, Material.WOOL, Material.GOLD_BLOCK, Material.IRON_BLOCK, Material.BRICK,

@@ -96,7 +96,9 @@ public class Commands implements CommandExecutor, TabCompleter {
             builder.append("  [Back]");
             builder.color(net.md_5.bungee.api.ChatColor.GOLD);
             builder.event(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/rt list 1 d"));
-            builder.append("\n" +ChatColor.DARK_PURPLE + ChatColor.ITALIC + ritual.description);
+            builder.append("\n" + ritual.description);
+            builder.color(net.md_5.bungee.api.ChatColor.DARK_PURPLE);
+            builder.italic(true);
             builder.append("\n\n" + ChatColor.GREEN + "" + ChatColor.BOLD + "Ingredients:\n");
             for (Map.Entry<Material, Integer> entry : ritual.ingredients.entrySet()) {
                 builder.append(WordUtils.capitalizeFully(entry.getKey().toString().replace('_', ' ').toLowerCase()));

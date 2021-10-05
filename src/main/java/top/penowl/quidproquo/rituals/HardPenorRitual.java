@@ -16,12 +16,13 @@ public class HardPenorRitual extends Ritual {
         addIngredient(Material.REDSTONE, 16);
         addIngredient(Material.WHEAT, 32);
         name = "erection";
+        backfire = 0.1;
         description = "Erect a hard penor around yourself.";
     }
 
     @Override
     public void execute(Player caster, Player target, Location location) {
-        Block shaft = caster.getLocation().getBlock();
+        Block shaft = target.getLocation().getBlock();
         Block ball1 = shaft.getRelative(2, 0, -1);
         Block ball2 = shaft.getRelative(-2, 0, -1);
         for(int d = 0; d < 8; d ++) {

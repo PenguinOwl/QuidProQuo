@@ -11,7 +11,7 @@ public class KickingRitual extends Ritual {
     @Override
     public void setup() {
         addIngredient(Material.WHEAT, 64*2);
-        addIngredient(Material.FLOWER_POT, 1);
+        addIngredient(Material.FLOWER_POT_ITEM, 1);
         addIngredient(Material.LOG, 1);
         addIngredient(Material.IRON_BOOTS, 1);
         health = 3;
