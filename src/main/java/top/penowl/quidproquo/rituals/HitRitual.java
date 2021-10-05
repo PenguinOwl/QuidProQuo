@@ -25,6 +25,7 @@ public class HitRitual extends Ritual {
     public void execute(Player caster, Player target, Location location) {
         target.playSound(target.getLocation(), Sound.HURT_FLESH, 1, 1);
         target.damage(1);
+        target.setVelocity(target.getVelocity().add(target.getLocation().getDirection().multiply(1)));
         Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(QuidProQuo.instance, new Runnable() {
             public void run() {
                 target.playSound(target.getLocation(), Sound.HURT_FLESH, 0.8f, 1.1f);
