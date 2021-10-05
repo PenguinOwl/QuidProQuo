@@ -91,7 +91,7 @@ public final class Events implements Listener {
             Collection<LivingEntity> sacrifices = block.getWorld().getEntitiesByClass(LivingEntity.class);
             ArrayList<LivingEntity> near_sacrifices = new ArrayList<LivingEntity>();
             for (Item item : items) {
-                if (item.getLocation().distance(location) < 2) {
+                if (item.getLocation().distance(location) < 3.5) {
                     near_items.add(item);
                 }
             }
