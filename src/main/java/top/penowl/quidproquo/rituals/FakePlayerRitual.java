@@ -39,7 +39,7 @@ public class FakePlayerRitual extends Ritual {
         slime.setPassenger(armorStand);
         slime.setSize(1);
         EntityEquipment equipment = armorStand.getEquipment();
-        ItemStack skull = new ItemStack(Material.SKULL);
+        ItemStack skull = new ItemStack(Material.SKULL, 1);
         SkullMeta meta = (SkullMeta)skull;
         meta.setOwner(caster.getName());
         equipment.setHelmet(skull);
