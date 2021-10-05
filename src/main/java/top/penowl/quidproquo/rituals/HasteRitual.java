@@ -12,8 +12,6 @@ import top.penowl.quidproquo.Ritual;
 
 public class HasteRitual extends Ritual {
 
-    public static boolean enabled = false;
-
     @Override
     public void setup() {
         addIngredient(Material.DIAMOND_PICKAXE,1);
