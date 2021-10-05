@@ -25,9 +25,9 @@ public class HasteRitual extends Ritual {
     @Override
     public void execute(Player caster, Player target, Location location) {
         Random random = new Random();
-        if(random.nextInt(10) == 0) {
-            target.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, 45, 50));
-        } else target.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, 45, 50));
+        if(random.nextInt(10) != 0) {
+            target.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, 45 * 20, 85));
+        } else target.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, 45 * 20, 50));
     }
     
 }
