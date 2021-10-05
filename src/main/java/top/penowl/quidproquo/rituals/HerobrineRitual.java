@@ -65,6 +65,7 @@ public class HerobrineRitual extends Ritual {
         ItemStack skull = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);
         SkullMeta meta = (SkullMeta) skull.getItemMeta();
         meta.setOwner("MHF_Herobrine");
+        meta.setDisplayName("Herobrine's Head");
         skull.setItemMeta(meta);
         equipment.setHelmet(skull);
         equipment.setChestplate(new ItemStack(Material.DIAMOND_CHESTPLATE));
