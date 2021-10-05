@@ -19,6 +19,7 @@ public class LightQuicktimeRitual extends Ritual {
         name = "quicktime lite";
         health = 4;
         backfire = 0.3;
+        description = "Force your enemy to undergo a quicktime event.";
     }
 
     @Override

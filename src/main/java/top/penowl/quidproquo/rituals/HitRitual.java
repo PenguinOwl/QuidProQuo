@@ -18,6 +18,7 @@ public class HitRitual extends Ritual {
        name = "shadow hit";
        health = 1;
        notify = false;
+       description = "Play a fake hit noise to someone.";
     }
 
     @Override

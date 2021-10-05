@@ -17,6 +17,7 @@ public class CreeperHissRitual extends Ritual {
         name = "creeper hissing";
         health = 1;
         notify = false;
+        description = "Play a creeper hiss to your enemy.";
     }
 
     @Override

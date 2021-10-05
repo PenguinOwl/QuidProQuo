@@ -22,6 +22,7 @@ public class ChugJugRitual extends Ritual {
         addSacrifice(EntityType.WITCH, 1);
         health = 10;
         name = "chug jug";
+        description = "Summon a chug-jug'ed witch to poison your enemy!";
     }
 
     @Override

@@ -17,6 +17,7 @@ public class ChickenSpewRitual extends Ritual {
         health = 3;
         name = "chicken spew";
         backfire = 0.1;
+        description = "Summon a flock of chickens to floof your enemy's mental state.";
     }
 
     @Override

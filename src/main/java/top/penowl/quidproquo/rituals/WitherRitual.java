@@ -20,6 +20,7 @@ public class WitherRitual extends Ritual {
         health = 2;
         notify = false;
         lightning = true;
+        description = "Summons a wither.";
     }
 
     @Override

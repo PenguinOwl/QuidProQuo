@@ -18,6 +18,7 @@ public class RotateRitual extends Ritual {
         backfire = 0.05;
         name = "rotation";
         notify = false;
+        description = "Rotate your target by 180 degrees.";
     }
 
     @Override

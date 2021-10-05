@@ -17,6 +17,7 @@ public class GBJRitual extends Ritual {
         name = "caging";
         health = 5;
         backfire = 0.2;
+        description = "Trap your foe in the wagie cage!";
     }
 
     @Override

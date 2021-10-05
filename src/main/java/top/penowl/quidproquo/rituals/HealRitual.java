@@ -14,6 +14,7 @@ public class HealRitual extends Ritual {
         addIngredient(Material.WHEAT, 16);
         addIngredient(Material.GOLD_NUGGET, 1);
         name = "healing";
+        description = "Heal both you and your target for two hearts.";
     }
 
     @Override

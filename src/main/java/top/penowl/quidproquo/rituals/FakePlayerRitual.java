@@ -23,6 +23,7 @@ public class FakePlayerRitual extends Ritual {
         name = "player illusion";
         notify = false;
         health = 4;
+        description = "Summon a ghost nametag to spook your foe.";
     }
 
     @Override

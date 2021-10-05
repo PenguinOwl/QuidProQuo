@@ -29,6 +29,7 @@ public class HerobrineRitual extends Ritual {
         health = 10;
         name = "herobrine";
         backfire = 0.1;
+        description = "Summon Herobrine to vanquish your foe!";
     }
     @Override
     public void execute(Player caster, Player target, Location location) {
