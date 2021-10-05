@@ -9,6 +9,8 @@ import org.bukkit.entity.Slime;
 import org.bukkit.inventory.EntityEquipment;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.SkullMeta;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 
 import java.util.Random;
 
@@ -38,6 +40,7 @@ public class FakePlayerRitual extends Ritual {
         armorStand.setCustomName(caster.getName());
         armorStand.setCustomNameVisible(true);
         slime.setPassenger(armorStand);
+        slime.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 10*20, 50));
         slime.setSize(1);
         EntityEquipment equipment = armorStand.getEquipment();
         ItemStack skull = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);

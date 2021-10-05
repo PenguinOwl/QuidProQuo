@@ -22,7 +22,6 @@ public class LightningRitual extends Ritual {
 
     @Override
     public void execute(Player caster, Player target, Location location) {
-        // Does this actually get the overworld?
         World world = location.getWorld();
         List<Player> players = world.getPlayers();
         for(Player player : players) {
