@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Set;
 import java.util.UUID;
 
+import org.bukkit.command.Command;
 import org.bukkit.event.HandlerList;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.reflections.Reflections;
@@ -89,7 +90,8 @@ public class QuidProQuo extends JavaPlugin {
         }
 
         // register command handler
-        getCommand("ritual").setExecutor(new Commands(rituals));
+        Commands commands = new Commands(rituals);
+        getCommand("ritual").setExecutor(commands);
 
     }
     @Override

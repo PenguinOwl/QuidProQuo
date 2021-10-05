@@ -1,10 +1,12 @@
 package top.penowl.quidproquo;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.apache.commons.lang.WordUtils;
 import org.bukkit.ChatColor;
@@ -12,14 +14,16 @@ import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
+import org.bukkit.util.StringUtil;
 
 import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.ComponentBuilder;
 import net.md_5.bungee.api.chat.HoverEvent;
 
-public class Commands implements CommandExecutor {
+public class Commands implements CommandExecutor, TabCompleter {
 
     HashMap<String, Ritual> recipes = new HashMap<String, Ritual>();
 
@@ -31,6 +35,7 @@ public class Commands implements CommandExecutor {
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        String key = String.join(" ", Arrays.asList(args).stream().map(string -> string.replace("_", " ")).collect(Collectors.toSet())).toLowerCase();
 		if (args.length < 1 || args[0].toLowerCase().equals("list")) {
             List<String> ritualNames = new ArrayList<String>(recipes.keySet());
             Collections.sort(ritualNames);
@@ -83,8 +88,7 @@ public class Commands implements CommandExecutor {
                 playerSender.spigot().sendMessage(builder.create());
             }
             return true;
-        } else if (recipes.containsKey(String.join(" ", args).toLowerCase())) {
-            String key = String.join(" ", args).toLowerCase();
+        } else if (recipes.containsKey(key)) {
             ComponentBuilder builder = new ComponentBuilder("");
             Ritual ritual = recipes.get(key);
             builder.append("\n\n\n\n\n\n\n\n\n\n\n");
@@ -109,7 +113,7 @@ public class Commands implements CommandExecutor {
                 }
             }
             builder.append(" \n" + ChatColor.YELLOW + "" + ChatColor.BOLD + "Blood: " + ChatColor.RESET + "" + ChatColor.AQUA + String.valueOf(ritual.health / 2.0) + ChatColor.RED + " ♥\n");
-            builder.append(ChatColor.YELLOW + "" + ChatColor.BOLD + "Backfire: " + ChatColor.RESET + "" + ChatColor.AQUA + String.valueOf(Math.round(ritual.backfire * 100)) + "%\n");
+            builder.append(ChatColor.YELLOW + "" + ChatColor.BOLD + "Backfire: " + ChatColor.RESET + "" + ChatColor.AQUA + String.valueOf(Math.round(ritual.backfire * 100)) + "%");
             if (sender instanceof Player) {
                 Player playerSender = (Player) sender;
                 playerSender.spigot().sendMessage(builder.create());
@@ -118,5 +122,13 @@ public class Commands implements CommandExecutor {
         }
         return false;
 	}
+
+    @Override
+    public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
+        final List<String> completions = new ArrayList<>();
+        StringUtil.copyPartialMatches(args[0], recipes.keySet().stream().map(string -> string.replace(" ", "_")).collect(Collectors.toSet()), completions);
+        Collections.sort(completions);
+        return completions;
+    }
     
 }
