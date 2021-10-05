@@ -16,7 +16,7 @@ public class HardPenorRitual extends Ritual {
         addIngredient(Material.REDSTONE, 16);
         addIngredient(Material.WHEAT, 32);
         name = "erection";
-        description = "Encase your foe in a hard penor.";
+        description = "Erect a hard penor around yourself.";
     }
 
     @Override
