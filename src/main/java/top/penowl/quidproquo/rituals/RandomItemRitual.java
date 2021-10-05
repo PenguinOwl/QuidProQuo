@@ -23,6 +23,7 @@ public class RandomItemRitual extends Ritual {
         health = 2;
         name = "itemization";
         notify = false;
+        description = "Summon a random item. ANY item.";
     }
 
     @Override

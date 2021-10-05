@@ -35,7 +35,7 @@ public class Commands implements CommandExecutor, TabCompleter {
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        String key = String.join(" ", Arrays.asList(args).stream().map(string -> string.replace("_", " ")).collect(Collectors.toSet())).toLowerCase();
+        String key = String.join(" ", Arrays.asList(args).stream().map(string -> string.replace("_", " ")).collect(Collectors.toList())).toLowerCase();
 		if (args.length < 1 || args[0].toLowerCase().equals("list")) {
             List<String> ritualNames = new ArrayList<String>(recipes.keySet());
             Collections.sort(ritualNames);
@@ -96,6 +96,7 @@ public class Commands implements CommandExecutor, TabCompleter {
             builder.append("  [Back]");
             builder.color(net.md_5.bungee.api.ChatColor.GOLD);
             builder.event(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/rt list 1 d"));
+            builder.append("\n" +ChatColor.DARK_PURPLE + ChatColor.ITALIC + ritual.description);
             builder.append("\n\n" + ChatColor.GREEN + "" + ChatColor.BOLD + "Ingredients:\n");
             for (Map.Entry<Material, Integer> entry : ritual.ingredients.entrySet()) {
                 builder.append(WordUtils.capitalizeFully(entry.getKey().toString().replace('_', ' ').toLowerCase()));

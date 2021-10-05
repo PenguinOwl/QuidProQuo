@@ -16,6 +16,8 @@ public class LightningRitual extends Ritual {
         addIngredient(Material.WHEAT, 64);
         addIngredient(Material.GLOWSTONE, 16);
         name = "lightning location";
+        description = "Send a bolt of locating lightning to all players.";
+        notify = false;
     }
 
     @Override

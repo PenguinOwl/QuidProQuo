@@ -17,6 +17,7 @@ public class KickingRitual extends Ritual {
         health = 3;
         name = "kicking";
         backfire = 0.4;
+        description = "Kick your enemy from the server!";
     }
 
     @Override

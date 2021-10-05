@@ -22,6 +22,7 @@ public class DragonRitual extends Ritual {
         name = "dragon summoning";
         health = 3;
         lightning = true;
+        description = "Summon the fearsome Ender Dragon.";
     }
 
     @Override

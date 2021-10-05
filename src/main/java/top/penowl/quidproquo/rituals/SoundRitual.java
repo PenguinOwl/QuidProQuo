@@ -15,6 +15,7 @@ public class SoundRitual extends Ritual {
         name = "shadow sound";
         health = 1;
         notify = false;
+        description = "Plays a random sound to your target.";
     }
 
     @Override

@@ -14,6 +14,7 @@ public class FeedingRitual extends Ritual {
         addIngredient(Material.WHEAT, 16);
         health = 1;
         name = "feeding";
+        description = "Restore you and your target's food levels to maximum.";
     }
 
     @Override

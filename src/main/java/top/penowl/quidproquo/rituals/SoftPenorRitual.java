@@ -17,6 +17,7 @@ public class SoftPenorRitual extends Ritual {
         addIngredient(Material.WHEAT, 32);
         backfire = 0.10;
         name = "disfunction";
+        description = "Encase your enemy in a sand penor.";
     }
 
     @Override

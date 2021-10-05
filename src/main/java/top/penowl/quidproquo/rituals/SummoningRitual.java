@@ -18,6 +18,7 @@ public class SummoningRitual extends Ritual {
         health = 6;
         name = "summoning";
         backfire = 0.04;
+        description = "Summons a player to the altar.";
     }
 
     @Override

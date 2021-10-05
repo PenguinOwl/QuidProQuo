@@ -16,6 +16,7 @@ public class BatSpewRitual extends Ritual {
         addSacrifice(EntityType.CHICKEN, 1);
         name = "bat spew";
         backfire = 0.1;
+        description = "Summon a cauldron of bats to strike fear into your enemy.";
     }
 
     @Override

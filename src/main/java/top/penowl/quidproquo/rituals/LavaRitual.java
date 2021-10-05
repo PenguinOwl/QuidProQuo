@@ -14,6 +14,7 @@ public class LavaRitual extends Ritual {
        addIngredient(Material.WHEAT, 64);
        backfire = 0.10;
        name = "combustion";
+       description = "Light your enemy on fire for a short period.";
     }
 
     @Override

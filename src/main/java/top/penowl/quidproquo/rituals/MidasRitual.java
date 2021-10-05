@@ -20,6 +20,7 @@ public class MidasRitual extends Ritual {
         addIngredient(Material.WHEAT, 64*3);
         name = "midas";
         health = 5;
+        description = "Turn the block your enemy is looking at to gold.";
     }
 
     @Override

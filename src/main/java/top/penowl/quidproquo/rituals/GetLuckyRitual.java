@@ -18,6 +18,7 @@ public class GetLuckyRitual extends Ritual {
         lightning = true;
         name = "daring";
         notify = false;
+        description = "Flip a coin and either nuke your base or get mountains of gold.";
     }
 
     @Override

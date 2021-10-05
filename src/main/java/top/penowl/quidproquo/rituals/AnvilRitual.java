@@ -20,6 +20,7 @@ public class AnvilRitual extends Ritual {
         health = 5;
         backfire = 0.5;
         notify = false;
+        description = "Drop an anvil over your foe.";
     }
 
     @Override

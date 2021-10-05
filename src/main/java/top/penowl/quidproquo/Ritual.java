@@ -31,6 +31,9 @@ public abstract class Ritual {
 
     // name of ritual, should be a gerund
     public String name = "unnamed";
+    
+    // short description of ritual
+    public String description = "";
 
     // whether you want a lightning effect
     public Boolean lightning = false;

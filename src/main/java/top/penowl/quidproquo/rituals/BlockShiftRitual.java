@@ -37,6 +37,7 @@ public class BlockShiftRitual extends Ritual {
         addIngredient(Material.ENDER_PEARL, 1);
         name = "block shift";
         health = 3;
+        description = "Shift reality around you.";
     }
 
     @Override

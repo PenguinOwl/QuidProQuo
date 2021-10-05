@@ -17,6 +17,7 @@ public class SnowmanRitual extends Ritual {
         addIngredient(Material.WHEAT, 32);
         health = 10;
         name = "snowing";
+        description = "Cause a snowman invasion at the location of your enemy.";
     }
 
     @Override

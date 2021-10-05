@@ -18,6 +18,7 @@ public class CrystalizationRtiual extends Ritual {
         name = "crystalization";
         health = 2;
         notify = false;
+        description = "Combine ingredients into a ender crystal.";
     }
 
     @Override

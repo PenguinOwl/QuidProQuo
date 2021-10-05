@@ -19,6 +19,7 @@ public class FillerRitual extends Ritual {
         name = "trolling";
         health = 2;
         backfire = 0.2;
+        description = "Fill your foe's inventory with junk!";
     }
 
     @Override
