@@ -13,7 +13,7 @@ public class GetLuckyRitual extends Ritual {
     public void setup() {
         addIngredient(Material.GOLD_BLOCK, 1);
         addIngredient(Material.TNT, 1);
-        addIngredient(Material.WHEAT, 256);
+        addIngredient(Material.WHEAT, 64);
         health = 3;
         lightning = true;
         name = "daring";

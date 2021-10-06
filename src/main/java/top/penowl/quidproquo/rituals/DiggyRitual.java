@@ -12,7 +12,7 @@ public class DiggyRitual extends Ritual {
     @Override
     public void setup() {
         addIngredient(Material.OBSIDIAN, 1);
-        addIngredient(Material.WHEAT, 64*1 + 32);
+        addIngredient(Material.WHEAT, 64);
         addIngredient(Material.IRON_PICKAXE, 1);
         addIngredient(Material.GRAVEL, 1);
         description = "Digs a hole to bedrock and then some.";

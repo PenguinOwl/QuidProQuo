@@ -14,11 +14,11 @@ public class HitRitual extends Ritual {
     public void setup() {
        addIngredient(Material.IRON_SWORD, 1);
        addIngredient(Material.IRON_INGOT, 1);
-       addIngredient(Material.WHEAT, 9);
+       addIngredient(Material.WHEAT, 8);
        name = "shadow hit";
        health = 1;
        notify = false;
-       description = "Play a fake hit noise to someone.";
+       description = "Send a fake hit to someone.";
     }
 
     @Override

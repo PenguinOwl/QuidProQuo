@@ -13,7 +13,7 @@ public class RotateRitual extends Ritual {
         addIngredient(Material.COMPASS, 1);
         addIngredient(Material.STICK, 1);
         addIngredient(Material.IRON_BOOTS, 1);
-        addIngredient(Material.WHEAT, 128);
+        addIngredient(Material.WHEAT, 24);
         health = 4;
         backfire = 0.05;
         name = "rotation";

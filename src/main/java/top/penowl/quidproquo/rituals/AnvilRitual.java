@@ -13,12 +13,12 @@ public class AnvilRitual extends Ritual {
     @Override
     public void setup() {
         addIngredient(Material.ANVIL, 1);
-        addIngredient(Material.ENDER_PEARL, 1);
+        addIngredient(Material.ARROW, 1);
         addIngredient(Material.ROTTEN_FLESH, 1);
         addIngredient(Material.WHEAT, 32);
         name = "anviling";
-        health = 5;
-        backfire = 0.5;
+        health = 4;
+        backfire = 0.3;
         notify = false;
         description = "Drop an anvil on your enemy.";
     }

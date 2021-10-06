@@ -13,6 +13,7 @@ public class GBJRitual extends Ritual {
     public void setup() {
         addIngredient(Material.IRON_INGOT, 6);
         addIngredient(Material.STONE, 1);
+        addIngredient(Material.OBSIDIAN, 1);
         addIngredient(Material.WHEAT, 272);
         name = "caging";
         health = 5;

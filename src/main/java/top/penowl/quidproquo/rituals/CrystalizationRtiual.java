@@ -14,7 +14,7 @@ public class CrystalizationRtiual extends Ritual {
         addIngredient(Material.ENDER_PEARL, 1);
         addIngredient(Material.GLASS, 1);
         addIngredient(Material.TNT, 1);
-        addIngredient(Material.WHEAT, 32);
+        addIngredient(Material.WHEAT, 16);
         name = "crystalization";
         health = 2;
         notify = false;

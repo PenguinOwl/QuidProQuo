@@ -18,7 +18,7 @@ public class ChugJugRitual extends Ritual {
         addIngredient(Material.GLASS_BOTTLE, 1);
         addIngredient(Material.REDSTONE, 1);
         addIngredient(Material.GLOWSTONE_DUST, 1);
-        addIngredient(Material.WHEAT, 64*8);
+        addIngredient(Material.WHEAT, 64*3);
         addSacrifice(EntityType.WITCH, 1);
         health = 10;
         name = "chug jug";
@@ -31,7 +31,7 @@ public class ChugJugRitual extends Ritual {
         witch.setMaxHealth(100);
         witch.setHealth(100);
         witch.setCustomName("fortnite gaming");
-        witch.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 10000, 4));
+        witch.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 100000, 4));
     }
     
 }

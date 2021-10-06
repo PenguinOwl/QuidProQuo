@@ -21,7 +21,9 @@ public class FakePlayerRitual extends Ritual {
     @Override
     public void setup() {
         addIngredient(Material.WHEAT, 32);
-        addIngredient(Material.LEAVES, 32);
+        addIngredient(Material.WATER_BUCKET, 1);
+        addIngredient(Material.LEAVES, 64);
+        byproducts.add(new ItemStack(Material.BUCKET, 1));
         name = "player illusion";
         notify = false;
         health = 4;

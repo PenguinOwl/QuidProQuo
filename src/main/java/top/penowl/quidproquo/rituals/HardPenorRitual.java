@@ -12,12 +12,12 @@ public class HardPenorRitual extends Ritual {
     @Override
     public void setup() {
         addIngredient(Material.COBBLESTONE, 1);
-        addIngredient(Material.BONE, 1);
-        addIngredient(Material.REDSTONE, 16);
+        addIngredient(Material.BONE, 8);
+        addIngredient(Material.REDSTONE, 1);
         addIngredient(Material.WHEAT, 32);
         name = "erection";
         backfire = 0.1;
-        description = "Erect a hard penor around yourself.";
+        description = "Erect a hard penor around your foe.";
     }
 
     @Override

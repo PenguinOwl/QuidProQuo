@@ -14,9 +14,10 @@ public class HasteRitual extends Ritual {
 
     @Override
     public void setup() {
-        addIngredient(Material.DIAMOND_PICKAXE,1);
-        addIngredient(Material.WHEAT, 96);
+        addIngredient(Material.IRON_PICKAXE, 1);
+        addIngredient(Material.WHEAT, 64);
         addIngredient(Material.REDSTONE, 16);
+        addIngredient(Material.DIAMOND, 1);
         health = 8;
         name = "minering";
         description = "Give the target extreme haste or fatigue";
@@ -27,7 +28,9 @@ public class HasteRitual extends Ritual {
         Random random = new Random();
         if(random.nextInt(10) != 0) {
             target.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, 45 * 20, 85));
-        } else target.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, 45 * 20, 50));
+        } else {
+            target.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, 45 * 20, 50));
+        }
     }
     
 }

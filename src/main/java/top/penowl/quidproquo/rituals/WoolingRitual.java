@@ -16,7 +16,7 @@ public class WoolingRitual extends Ritual {
         addSacrifice(EntityType.SHEEP, 1);
         name = "wooling";
         health = 2;
-        byproducts.add(new ItemStack(Material.WOOL, 100));
+        byproducts.add(new ItemStack(Material.WOOL, 64));
         notify = false;
         description = "Summons a ton of wool.";
     }

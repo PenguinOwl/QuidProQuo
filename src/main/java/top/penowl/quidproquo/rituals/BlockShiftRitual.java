@@ -31,8 +31,8 @@ public class BlockShiftRitual extends Ritual {
     };
     @Override
     public void setup() {
-        addIngredient(Material.RED_MUSHROOM, 8);
-        addIngredient(Material.BROWN_MUSHROOM, 8);
+        addIngredient(Material.RED_MUSHROOM, 4);
+        addIngredient(Material.BROWN_MUSHROOM, 4);
         addIngredient(Material.WHEAT, 32);
         addIngredient(Material.ENDER_PEARL, 1);
         name = "block shift";

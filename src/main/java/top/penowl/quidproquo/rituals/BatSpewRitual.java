@@ -15,6 +15,7 @@ public class BatSpewRitual extends Ritual {
         addIngredient(Material.IRON_PICKAXE, 1);
         addSacrifice(EntityType.CHICKEN, 1);
         name = "bat spew";
+        health = 2;
         backfire = 0.1;
         description = "Summon a cauldron of bats to strike fear into your enemy.";
     }
