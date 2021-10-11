@@ -12,7 +12,7 @@ public class WitherRitual extends Ritual {
     @Override
     public void setup() {
         addIngredient(Material.BONE, 16);
-        addIngredient(Material.WHEAT, 64*9);
+        addIngredient(Material.WHEAT, 64*10);
         addSacrifice(EntityType.SKELETON, 1);
         addIngredient(Material.FLOWER_POT_ITEM, 1);
         addIngredient(Material.SAND, 1);

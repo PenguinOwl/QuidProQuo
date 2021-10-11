@@ -16,7 +16,7 @@ public class KickingRitual extends Ritual {
         addIngredient(Material.IRON_BOOTS, 1);
         health = 3;
         name = "kicking";
-        backfire = 0.4;
+        backfire = 0.3;
         description = "ADMIN ABUSE!";
     }
 

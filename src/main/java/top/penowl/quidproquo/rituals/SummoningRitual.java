@@ -15,7 +15,7 @@ public class SummoningRitual extends Ritual {
     public void setup() {
         addIngredient(Material.ENDER_PEARL, 1);
         addIngredient(Material.COMPASS, 1);
-        addIngredient(Material.WHEAT, 64+32);
+        addIngredient(Material.WHEAT, 64*2);
         health = 6;
         name = "summoning";
         backfire = 0.15;

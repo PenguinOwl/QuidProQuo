@@ -11,7 +11,7 @@ public class LavaRitual extends Ritual {
     public void setup() {
        addIngredient(Material.LAVA_BUCKET, 1);
        addIngredient(Material.DIAMOND, 1);
-       addIngredient(Material.WHEAT, 16);
+       addIngredient(Material.WHEAT, 32);
        backfire = 0.20;
        name = "combustion";
        description = "Light your enemy on fire for a short period.";

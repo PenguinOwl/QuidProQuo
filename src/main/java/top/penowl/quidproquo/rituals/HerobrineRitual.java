@@ -20,7 +20,7 @@ public class HerobrineRitual extends Ritual {
 
     @Override
     public void setup() {
-        addIngredient(Material.WHEAT, 64);
+        addIngredient(Material.WHEAT, 64*3);
         addIngredient(Material.DIAMOND, 1);
         addIngredient(Material.ROTTEN_FLESH, 16);
         addIngredient(Material.REDSTONE_BLOCK, 1);

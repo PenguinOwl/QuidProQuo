@@ -26,7 +26,7 @@ public class RSpawnEggRitual extends Ritual {
     @Override
     public void setup() {
         addIngredient(Material.EGG, 16);
-        addIngredient(Material.WHEAT, 32);
+        addIngredient(Material.WHEAT, 64);
         name = "egging";
         health = 4;
         description = "Summon a random spawn egg.";

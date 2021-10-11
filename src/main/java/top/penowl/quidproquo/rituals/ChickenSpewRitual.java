@@ -11,7 +11,7 @@ public class ChickenSpewRitual extends Ritual {
 
     @Override
     public void setup() {
-        addIngredient(Material.WHEAT, 16);
+        addIngredient(Material.WHEAT, 32);
         addIngredient(Material.DIAMOND_HOE, 1);
         addSacrifice(EntityType.CHICKEN, 1);
         health = 3;

@@ -17,7 +17,7 @@ public class ChugJugRitual extends Ritual {
         addIngredient(Material.GLASS_BOTTLE, 1);
         addIngredient(Material.REDSTONE, 1);
         addIngredient(Material.GLOWSTONE_DUST, 1);
-        addIngredient(Material.WHEAT, 64*1);
+        addIngredient(Material.WHEAT, 64*4);
         addSacrifice(EntityType.WITCH, 1);
         health = 10;
         name = "chug jug";

@@ -14,7 +14,7 @@ public class GBJRitual extends Ritual {
         addIngredient(Material.IRON_INGOT, 6);
         addIngredient(Material.STONE, 1);
         addIngredient(Material.OBSIDIAN, 1);
-        addIngredient(Material.WHEAT, 64*2);
+        addIngredient(Material.WHEAT, 64*3);
         name = "caging";
         health = 5;
         backfire = 0.2;

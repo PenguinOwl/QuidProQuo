@@ -14,7 +14,7 @@ public class SoftPenorRitual extends Ritual {
         addIngredient(Material.SAND, 1);
         addIngredient(Material.BONE, 4);
         addIngredient(Material.REDSTONE, 16);
-        addIngredient(Material.WHEAT, 32);
+        addIngredient(Material.WHEAT, 64);
         backfire = 0.10;
         name = "disfunction";
         description = "Encase your enemy in a sand penor.";

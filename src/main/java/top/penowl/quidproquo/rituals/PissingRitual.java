@@ -19,7 +19,7 @@ public class PissingRitual extends Ritual {
         health = 2;
         name = "pissing";
         description = "Make your foe piss their pants.";
-        backfire = 0.25;
+        backfire = 0.15;
     }
 
     @Override

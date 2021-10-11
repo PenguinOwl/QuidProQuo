@@ -21,7 +21,7 @@ public class AirliftRitual extends Ritual {
         addIngredient(Material.STONE, 1);
         addIngredient(Material.SAPLING, 1);
         addSacrifice(EntityType.CHICKEN, 1);
-        addIngredient(Material.WHEAT, 64*2);
+        addIngredient(Material.WHEAT, 64*3);
         name = "raising";
         description = "Raises the chunk.";
         health = 3;

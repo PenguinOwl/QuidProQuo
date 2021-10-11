@@ -12,7 +12,7 @@ public class DragonRitual extends Ritual {
     @Override
     public void setup() {
         addIngredient(Material.ENDER_PEARL, 16);
-        addIngredient(Material.WHEAT, 64*9*2);
+        addIngredient(Material.WHEAT, 64*9*3);
         addSacrifice(EntityType.CHICKEN, 2);
         addSacrifice(EntityType.ENDERMAN, 1);
         addIngredient(Material.EGG, 64);
