@@ -12,7 +12,7 @@ public class ChunkBegoneRitual extends Ritual {
     @Override
     public void setup() {
         addIngredient(Material.OBSIDIAN, 64);
-        addIngredient(Material.WHEAT, 64*12);
+        addIngredient(Material.WHEAT, 64*4);
         addIngredient(Material.ENDER_PEARL, 16);
         addIngredient(Material.GOLDEN_APPLE, 1);
         name = "chunk begone";

@@ -26,7 +26,9 @@ public class LightningRitual extends Ritual {
         World world = location.getWorld();
         List<Player> players = world.getPlayers();
         for(Player player : players) {
-            world.strikeLightningEffect(player.getLocation().clone().add(0, 1, 0));
+            if(player.getUniqueId() != caster.getUniqueId()) {
+                world.strikeLightningEffect(player.getLocation().clone().add(0, 1, 0));
+            }
         }
     }
     

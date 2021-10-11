@@ -17,7 +17,7 @@ public class MidasRitual extends Ritual {
         addIngredient(Material.GOLD_BLOCK, 1);
         addIngredient(Material.GOLDEN_APPLE, 1);
         addIngredient(Material.GLASS_BOTTLE, 1);
-        addIngredient(Material.WHEAT, 64);
+        addIngredient(Material.WHEAT, 16);
         name = "midas";
         health = 5;
         description = "Turn the block your enemy is looking at to gold.";

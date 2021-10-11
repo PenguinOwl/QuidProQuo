@@ -12,7 +12,7 @@ public class SoftPenorRitual extends Ritual {
     @Override
     public void setup() {
         addIngredient(Material.SAND, 1);
-        addIngredient(Material.BONE, 1);
+        addIngredient(Material.BONE, 4);
         addIngredient(Material.REDSTONE, 16);
         addIngredient(Material.WHEAT, 32);
         backfire = 0.10;

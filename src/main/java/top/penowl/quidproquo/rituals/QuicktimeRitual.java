@@ -14,7 +14,7 @@ public class QuicktimeRitual extends Ritual {
 
     @Override
     public void setup() {
-        addIngredient(Material.WHEAT, 64);
+        addIngredient(Material.WHEAT, 32);
         addIngredient(Material.POTION, 1);
         addIngredient(Material.SPIDER_EYE, 1);
         addSacrifice(EntityType.SPIDER, 1);

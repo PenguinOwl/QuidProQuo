@@ -14,13 +14,13 @@ public class HealRitual extends Ritual {
         addIngredient(Material.WHEAT, 8);
         addIngredient(Material.GOLD_NUGGET, 1);
         name = "healing";
-        description = "Heal both you and your target for three hearts.";
+        description = "Heal both you and your target for four hearts.";
     }
 
     @Override
     public void execute(Player caster, Player target, Location location) {
-        caster.setHealth(Math.min(caster.getMaxHealth(), caster.getHealth()+6.0));
-        target.setHealth(Math.min(caster.getMaxHealth(), caster.getHealth()+6.0));
+        caster.setHealth(Math.min(caster.getMaxHealth(), caster.getHealth()+8.0));
+        target.setHealth(Math.min(caster.getMaxHealth(), caster.getHealth()+8.0));
     }
     
 }

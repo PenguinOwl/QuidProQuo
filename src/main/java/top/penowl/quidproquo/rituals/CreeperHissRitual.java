@@ -13,7 +13,7 @@ public class CreeperHissRitual extends Ritual {
     public void setup() {
         addIngredient(Material.SULPHUR, 1);
         addIngredient(Material.REDSTONE, 1);
-        addIngredient(Material.WHEAT, 16);
+        addIngredient(Material.WHEAT, 8);
         name = "creeper hissing";
         health = 1;
         notify = false;

@@ -15,7 +15,7 @@ public class HasteRitual extends Ritual {
     @Override
     public void setup() {
         addIngredient(Material.IRON_PICKAXE, 1);
-        addIngredient(Material.WHEAT, 64);
+        addIngredient(Material.WHEAT, 32);
         addIngredient(Material.REDSTONE, 16);
         addIngredient(Material.DIAMOND, 1);
         health = 8;

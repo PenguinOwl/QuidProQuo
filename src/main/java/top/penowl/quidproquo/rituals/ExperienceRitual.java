@@ -10,7 +10,7 @@ public class ExperienceRitual extends Ritual {
 
     @Override
     public void setup() {
-        addIngredient(Material.REDSTONE_BLOCK, 9);
+        addIngredient(Material.REDSTONE_BLOCK, 5);
         addIngredient(Material.WHEAT, 16);
         addIngredient(Material.GLASS_BOTTLE, 1);
         health = 1;
@@ -21,7 +21,8 @@ public class ExperienceRitual extends Ritual {
 
     @Override
     public void execute(Player caster, Player target, Location location) {
-        caster.giveExp(200000);
+        target.giveExp(250);
+        caster.giveExp(250);
     }
     
 }

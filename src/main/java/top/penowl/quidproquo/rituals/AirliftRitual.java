@@ -21,7 +21,7 @@ public class AirliftRitual extends Ritual {
         addIngredient(Material.STONE, 1);
         addIngredient(Material.SAPLING, 1);
         addSacrifice(EntityType.CHICKEN, 1);
-        addIngredient(Material.WHEAT, 64*6);
+        addIngredient(Material.WHEAT, 64*2);
         name = "raising";
         description = "Raises the chunk.";
         health = 3;
@@ -31,9 +31,9 @@ public class AirliftRitual extends Ritual {
     @Override
     public void execute(Player caster, Player target, Location location) {
         Block block = location.getBlock().getRelative(-8, -12, -8);
-        for (int y = 200; y >= 0; y-- ) {
-            for (int x = 0; x < 16; x++ ) {
-                for (int z = 0; z < 16; z++ ) {
+        for (int y = 200; y >= 0; y--) {
+            for (int x = 0; x < 16; x++) {
+                for (int z = 0; z < 16; z++) {
                     Block targetBlock = block.getRelative(x, y, z);
                     Block toBlock = targetBlock.getRelative(0, 20, 0);
                     toBlock.setType(targetBlock.getType());

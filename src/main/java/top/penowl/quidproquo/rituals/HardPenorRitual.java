@@ -12,7 +12,7 @@ public class HardPenorRitual extends Ritual {
     @Override
     public void setup() {
         addIngredient(Material.COBBLESTONE, 1);
-        addIngredient(Material.BONE, 8);
+        addIngredient(Material.BONE, 4);
         addIngredient(Material.REDSTONE, 1);
         addIngredient(Material.WHEAT, 32);
         name = "erection";

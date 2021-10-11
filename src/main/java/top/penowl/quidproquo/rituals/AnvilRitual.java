@@ -15,7 +15,7 @@ public class AnvilRitual extends Ritual {
         addIngredient(Material.ANVIL, 1);
         addIngredient(Material.ARROW, 1);
         addIngredient(Material.ROTTEN_FLESH, 1);
-        addIngredient(Material.WHEAT, 32);
+        addIngredient(Material.WHEAT, 16);
         name = "anviling";
         health = 4;
         backfire = 0.3;

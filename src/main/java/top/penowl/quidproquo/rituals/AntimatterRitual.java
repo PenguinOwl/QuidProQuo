@@ -12,7 +12,7 @@ public class AntimatterRitual extends Ritual {
     @Override
     public void setup() {
         addIngredient(Material.OBSIDIAN, 1);
-        addIngredient(Material.WHEAT, 64*2);
+        addIngredient(Material.WHEAT, 64*1);
         addIngredient(Material.ENDER_PEARL, 1);
         addIngredient(Material.GOLDEN_CARROT, 1);
         name = "antimatter";

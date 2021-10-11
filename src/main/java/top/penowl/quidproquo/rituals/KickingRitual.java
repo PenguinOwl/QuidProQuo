@@ -10,7 +10,7 @@ public class KickingRitual extends Ritual {
 
     @Override
     public void setup() {
-        addIngredient(Material.WHEAT, 64);
+        addIngredient(Material.WHEAT, 32);
         addIngredient(Material.FLOWER_POT_ITEM, 1);
         addIngredient(Material.LOG, 1);
         addIngredient(Material.IRON_BOOTS, 1);

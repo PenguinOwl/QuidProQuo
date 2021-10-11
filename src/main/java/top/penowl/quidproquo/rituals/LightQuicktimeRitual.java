@@ -13,7 +13,7 @@ public class LightQuicktimeRitual extends Ritual {
 
     @Override
     public void setup() {
-        addIngredient(Material.WHEAT, 64+32);
+        addIngredient(Material.WHEAT, 64);
         addIngredient(Material.GLASS_BOTTLE, 1);
         addIngredient(Material.SPIDER_EYE, 1);
         name = "quicktime lite";

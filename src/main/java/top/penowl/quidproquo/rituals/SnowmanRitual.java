@@ -14,7 +14,7 @@ public class SnowmanRitual extends Ritual {
         addIngredient(Material.STICK, 32);
         addIngredient(Material.DIAMOND, 1);
         addSacrifice(EntityType.SHEEP, 1);
-        addIngredient(Material.WHEAT, 32);
+        addIngredient(Material.WHEAT, 16);
         health = 4;
         name = "snowing";
         description = "Cause a snowman invasion at the location of your enemy.";

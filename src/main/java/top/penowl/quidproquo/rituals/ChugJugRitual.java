@@ -14,11 +14,10 @@ public class ChugJugRitual extends Ritual {
 
     @Override
     public void setup() {
-        addIngredient(Material.BLAZE_ROD, 1);
         addIngredient(Material.GLASS_BOTTLE, 1);
         addIngredient(Material.REDSTONE, 1);
         addIngredient(Material.GLOWSTONE_DUST, 1);
-        addIngredient(Material.WHEAT, 64*3);
+        addIngredient(Material.WHEAT, 64*1);
         addSacrifice(EntityType.WITCH, 1);
         health = 10;
         name = "chug jug";

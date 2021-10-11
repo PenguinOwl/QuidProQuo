@@ -14,6 +14,7 @@ public class WoolingRitual extends Ritual {
     public void setup() {
         addIngredient(Material.IRON_SWORD, 1);
         addSacrifice(EntityType.SHEEP, 1);
+        addIngredient(Material.WHEAT, 8);
         name = "wooling";
         health = 2;
         byproducts.add(new ItemStack(Material.WOOL, 64));

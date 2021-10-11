@@ -11,7 +11,7 @@ public class BatSpewRitual extends Ritual {
 
     @Override
     public void setup() {
-        addIngredient(Material.WHEAT, 64);
+        addIngredient(Material.WHEAT, 20);
         addIngredient(Material.IRON_PICKAXE, 1);
         addSacrifice(EntityType.CHICKEN, 1);
         name = "bat spew";
