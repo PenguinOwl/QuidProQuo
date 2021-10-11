@@ -23,7 +23,7 @@ public class WooshRitual extends Ritual {
     @Override
     public void execute(Player caster, Player target, Location location) {
         int y = 255;
-        while (location.getBlock().getRelative(0, y, 0).getType() != Material.AIR) {
+        while (location.getBlock().getRelative(0, y, 0).getType() == Material.AIR) {
             y--;
         }
         caster.teleport(location.getBlock().getRelative(0, y + 1, 0).getLocation());
